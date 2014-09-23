@@ -14,4 +14,6 @@ public interface AccountEntityFacade {
     
     public List<Account> findAll(String personKey);
     
+    public void remove(long id);
+    
 }

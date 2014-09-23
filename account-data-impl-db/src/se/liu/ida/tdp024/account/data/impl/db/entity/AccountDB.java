@@ -2,16 +2,25 @@ package se.liu.ida.tdp024.account.data.impl.db.entity;
 
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import java.util.List;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import static org.eclipse.persistence.sessions.SessionProfiler.Transaction;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 public class AccountDB implements Account {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    
     private String personKey;
     private String accountType;
     private String  bankKey;
     private int holdings;
     
+    @OneToMany(mappedBy = "account", targetEntity = TransactionDB.class)
     private List<Transaction> transactions;
 
     /**
