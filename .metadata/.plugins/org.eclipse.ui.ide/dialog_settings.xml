@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.android.ide.eclipse.adt.feature:23.0.0.1245622"/>
+		<item value="com.android.ide.eclipse.adt.package.feature:23.0.0.1245622"/>
+		<item value="com.android.ide.eclipse.ddms.feature:23.0.0.1245622"/>
+		<item value="com.android.ide.eclipse.hierarchyviewer.feature:23.0.0.1245622"/>
+		<item value="com.android.ide.eclipse.traceview.feature:23.0.0.1245622"/>
+		<item value="org.aspectj:1.7.3.20130613144500-a"/>
+		<item value="org.eclipse.ajdt:2.2.3.e42x-RELEASE-20130625-1400"/>
+		<item value="org.eclipse.cdt.gdb:7.0.0.201202111925"/>
+		<item value="org.eclipse.cdt:8.0.2.201202111925"/>
+		<item value="org.eclipse.cvs:1.3.201.v20130116-085741-7B79FJKAkF7BG7ODH5CAJT"/>
+		<item value="org.eclipse.egit:3.4.0.201406110918-r"/>
+		<item value="org.eclipse.emf.common:2.10.0.v20140514-1158"/>
+		<item value="org.eclipse.emf.ecore:2.10.0.v20140514-1158"/>
+		<item value="org.eclipse.epp.mpc:1.3.0.v20140626-1535"/>
+		<item value="org.eclipse.help:2.0.102.v20140606-1215"/>
+		<item value="org.eclipse.jdt:3.8.2.v20130116-090414-8-8nFu3FNOfwKLRuqgXKIy9z0I83"/>
+		<item value="org.eclipse.jgit:3.4.0.201406110918-r"/>
+		<item value="org.eclipse.m2e.feature:1.5.0.20140606-0033"/>
+		<item value="org.eclipse.m2e.logback.feature:1.5.0.20140606-0033"/>
+		<item value="org.eclipse.mylyn.commons.identity:1.4.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.commons.notifications:1.4.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.commons.repositories:1.4.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.commons:3.12.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.context_feature:3.12.0.v20140606-1805"/>
+		<item value="org.eclipse.mylyn.discovery:3.12.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.ide_feature:3.12.0.v20140606-1805"/>
+		<item value="org.eclipse.mylyn.java_feature:3.12.0.v20140606-1805"/>
+		<item value="org.eclipse.mylyn.monitor:3.12.0.v20140605-1728"/>
+		<item value="org.eclipse.mylyn.tasks.ide:3.12.0.v20140605-1718"/>
+		<item value="org.eclipse.mylyn.team_feature:3.12.0.v20140606-1805"/>
+		<item value="org.eclipse.mylyn_feature:3.12.0.v20140605-1718"/>
+		<item value="org.eclipse.platform:4.4.0.v20140606-1558"/>
+		<item value="org.eclipse.rcp:4.4.0.v20140606-1445"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.6.0.v201405062148-7H7NFm0DxumWv9-7bhgNooiVMQ_TBruLpRz012TF"/>
+		<item value="org.springframework.ide.eclipse.ajdt.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.ajdt.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.aop.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.aop.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.autowire.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.autowire.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.batch.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.batch.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.data.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.data.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.integration.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.integration.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.maven.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.maven.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.mylyn.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.mylyn.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.osgi.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.osgi.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.roo.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.roo.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.security.feature:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.uaa.feature.source:3.5.1.201404300702-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.uaa.feature:3.5.1.201404300702-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.webflow.feature.source:3.5.1.201404300732-RELEASE"/>
+		<item value="org.springframework.ide.eclipse.webflow.feature:3.5.1.201404300732-RELEASE"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+</section>

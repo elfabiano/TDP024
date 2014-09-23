@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Wed Aug 14 14:08:37 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-0140-7cba-47db-000004a39ea0 
+on database directory memory:/Users/marbe92/workspace/BITBUCKET/TDP024/todo/todo-data-test/dataPU_embedded  with class loader sun.misc.Launcher$AppClassLoader@1729854 
+Loaded from file:/Users/marbe92/workspace/BITBUCKET/TDP024/todo/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_51-b11-457-11M4509
+user.dir=/Users/marbe92/workspace/BITBUCKET/TDP024/todo/todo-data-test
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
