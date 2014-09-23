@@ -1,33 +1,109 @@
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
+import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
+import se.liu.ida.tdp024.account.util.logger.AccountLogger;
+import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 public class AccountEntityFacadeDB implements AccountEntityFacade {
-
+    
+    private static final AccountLogger accountLogger = new AccountLoggerImpl();
+    
     @Override
     public long create(String accountType, String personKey, String bankKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            em.getTransaction().begin();
+            Account account = new AccountDB();
+            
+            account.setAccountType(accountType);
+            account.setBankKey(bankKey);
+            account.setHoldings(0);
+            
+            em.persist(account);
+            em.getTransaction().commit();
+            
+            return account.getId();
+            
+        }
+        catch(Exception e){
+            accountLogger.log(e);
+            return 0;
+        } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            
+            em.close();
+        }
+        
     }
 
     @Override
     public Account find(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        try {
+            return em.find(AccountDB.class, id);
+        } catch(Exception e){
+            accountLogger.log(e);
+            return null; 
+        } finally {
+            em.close();
+        }
+           
     }
 
     @Override
     public List<Account> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        try {
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            CriteriaQuery cq = cb.createQuery(AccountDB.class);
+            
+            Root<Account> account = cq.from(AccountDB.class);
+            cq.select(account);
+            
+            TypedQuery<Account> q = em.createQuery(cq);
+            List<Account> results = q.getResultList();
+            
+            return results;
+        } catch(Exception e){
+            accountLogger.log(e);
+            return null; 
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public List<Account> findAll(String personKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        try {
+            return em.find(AccountDB.class, personKey);
+        } catch(Exception e){
+            accountLogger.log(e);
+            return null; 
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public void updateAmount(long id, int newAmount) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void remove(long id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
