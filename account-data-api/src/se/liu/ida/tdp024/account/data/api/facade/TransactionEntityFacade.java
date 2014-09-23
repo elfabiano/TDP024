@@ -5,10 +5,22 @@
  */
 package se.liu.ida.tdp024.account.data.api.facade;
 
+import java.text.SimpleDateFormat;
+import java.util.List;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
+
 /**
  *
  * @author fabwi272
  */
 public interface TransactionEntityFacade {
+    public long create(String type, int amount, SimpleDateFormat time, String status);
     
+    public Transaction find(long id);
+    
+    public List<Transaction> findAll();
+    
+    public void update(long id, String type, int amount, SimpleDateFormat time, String status);
+    
+    public void remove(long id);
 }

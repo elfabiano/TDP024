@@ -5,12 +5,103 @@
  */
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
+import java.text.SimpleDateFormat;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
+import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
+import se.liu.ida.tdp024.account.util.logger.AccountLogger;
+import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 /**
  *
  * @author fabwi272
  */
 public class TransactionEntityFacadeDB implements TransactionEntityFacade {
+
+    AccountLogger logger = new AccountLoggerImpl();
+    
+    @Override
+    public long create(String type, int amount, SimpleDateFormat time, String status) {
+        
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            em.getTransaction().begin();
+            
+            Transaction transaction  = new TransactionDB();
+            
+            transaction.setType(type);
+            transaction.setAmount(amount);
+            transaction.setTime(time);
+            transaction.setStatus(status);
+            
+            em.persist(transaction);
+            em.getTransaction().commit();
+            
+            return transaction.getId();
+        }
+        catch(Exception e) {
+            logger.log(e);
+            return 0;
+        }
+        finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
+    }
+
+    @Override
+    public Transaction find(long id) {
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            return em.find(TransactionDB.class, id);
+            
+        } catch (Exception e) {
+            logger.log(e);
+            return null;
+        } finally {
+            em.close();
+        }
+    }
+
+    @Override
+    public List<Transaction> findAll() {
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            
+            CriteriaQuery<Transaction> cq = cb.createQuery(TransactionDB.class);
+            
+            Root<Transaction> transaction = cq.from(TransactionDB.class);
+            
+            cq.select(transaction);
+            
+            TypedQuery<Transaction> tq = em.createQuery(cq);
+            
+            List<Transaction> transactions = tq.getResultList();
+            return transactions;
+        }       
+    }
+
+    @Override
+    public void update(long id, String type, int amount, SimpleDateFormat time, String status) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void remove(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
