@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/Users/Fabian/Development/TDP024/todo/todo-data-db-impl/src/tdp024/todo/data/db/facade/TodoEntityFacadeDB.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/todo/todo-data-db-impl/src/tdp024/todo/data/db/entity/CategoryDB.java</file>
+            <file>file:/C:/Users/Fabian/Development/TDP024/todo/todo-data-db-impl/src/tdp024/todo/data/db/facade/CategoryEntityFacadeDB.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/todo/todo-data-db-impl/src/tdp024/todo/data/db/entity/TodoDB.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/todo/todo-data-db-impl/src/META-INF/persistence.xml</file>
         </group>
