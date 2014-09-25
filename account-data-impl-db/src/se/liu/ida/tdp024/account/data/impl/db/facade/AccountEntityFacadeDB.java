@@ -36,6 +36,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
         }
         catch(Exception e){
+            System.out.println(e);
             accountLogger.log(e);
             return 0;
         } finally {
@@ -57,6 +58,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             accountLogger.log(e);
             return null; 
         } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
             em.close();
         }
            
@@ -70,7 +74,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             CriteriaQuery cq = cb.createQuery(AccountDB.class);
             
             Root<Account> account = cq.from(AccountDB.class);
-            cq.select(account);
+            cq.select(account.get("id"));
             
             TypedQuery<Account> q = em.createQuery(cq);
             List<Account> results = q.getResultList();
@@ -80,6 +84,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             accountLogger.log(e);
             return null; 
         } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
             em.close();
         }
     }
@@ -88,11 +95,23 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     public List<Account> findAll(String personKey) {
         EntityManager em = EMF.getEntityManager();
         try {
-            return em.find(AccountDB.class, personKey);
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            CriteriaQuery cq = cb.createQuery(AccountDB.class);
+            
+            Root<Account> account = cq.from(AccountDB.class);
+            cq.where(account.get("personKey").in(personKey));
+            
+            TypedQuery<Account> q = em.createQuery(cq);
+            List<Account> results = q.getResultList();
+            
+            return results;
         } catch(Exception e){
             accountLogger.log(e);
             return null; 
         } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
             em.close();
         }
     }
@@ -102,9 +121,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void remove(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+
+
 }
