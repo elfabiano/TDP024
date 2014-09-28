@@ -16,7 +16,7 @@ import se.liu.ida.tdp024.account.logic.impl.facade.TransactionLogicFacadeImpl;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
 
-@Path("/account-rest/account")
+@Path("/account")
 public class AccountService {
     private final AccountLogicFacade alf = new AccountLogicFacadeImpl(new AccountEntityFacadeDB()); 
     private static final TransactionLogicFacade tlf = new TransactionLogicFacadeImpl(new TransactionEntityFacadeDB());
@@ -30,11 +30,9 @@ public class AccountService {
                             @QueryParam("bank") String bank) {
       
    //TODO: Return fail if fail
-      try {
-        alf.create(accountType, name, bank);
-      } catch (Exception e) {
-          return Response.notModified().build();
-      }
+
+      alf.create(accountType, name, bank);
+
       return Response.ok().build();
   }
   

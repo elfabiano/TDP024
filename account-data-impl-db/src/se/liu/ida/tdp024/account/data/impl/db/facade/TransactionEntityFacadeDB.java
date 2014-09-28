@@ -130,9 +130,12 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
     public void remove(long id) {
         EntityManager em  = EMF.getEntityManager();
         
+        
         try {
-            em.getTransaction().begin();            
-            em.remove(id);            
+            Transaction transaction = em.find(TransactionDB.class, id);
+            
+            em.getTransaction().begin();
+            em.remove(transaction);            
             em.getTransaction().commit();
         }
         catch (Exception e) {
@@ -144,6 +147,6 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
             }
             em.close();
         }
-    }
+    }    
     
 }
