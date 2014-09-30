@@ -81,7 +81,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
         try {
             CriteriaBuilder cb = em.getCriteriaBuilder();
             
-            CriteriaQuery<Transaction> cq = cb.createQuery(TransactionDB.class);
+            CriteriaQuery cq = cb.createQuery(TransactionDB.class);
             
             Root<Transaction> transaction = cq.from(TransactionDB.class);
             
@@ -91,17 +91,62 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
             
             List<Transaction> transactions = tq.getResultList();
             return transactions;
-        }       
+        } 
+        catch(Exception e) {
+            logger.log(e);
+            return null;
+        }
+        finally {
+            em.close();
+        }
     }
 
     @Override
     public void update(long id, String type, int amount, SimpleDateFormat time, String status) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            Transaction transaction = em.find(TransactionDB.class, id);
+            
+            em.getTransaction().begin();
+            transaction.setType(type);
+            transaction.setAmount(amount);
+            transaction.setTime(time);
+            transaction.setStatus(status);
+            em.getTransaction().commit();
+        }
+        catch (Exception e) {
+            logger.log(e);
+        }
+        finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
     }
 
     @Override
     public void remove(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        EntityManager em  = EMF.getEntityManager();
+        
+        
+        try {
+            Transaction transaction = em.find(TransactionDB.class, id);
+            
+            em.getTransaction().begin();
+            em.remove(transaction);            
+            em.getTransaction().commit();
+        }
+        catch (Exception e) {
+            logger.log(e);
+        }
+        finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
+    }    
     
 }

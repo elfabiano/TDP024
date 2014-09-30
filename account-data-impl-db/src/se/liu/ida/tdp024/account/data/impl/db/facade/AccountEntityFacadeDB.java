@@ -80,6 +80,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             List<Account> results = q.getResultList();
             
             return results;
+            
         } catch(Exception e){
             accountLogger.log(e);
             return null; 
@@ -118,7 +119,18 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
 
     @Override
     public void updateAmount(long id, int newAmount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager em = EMF.getEntityManager();
+        try {
+            em.find(AccountDB.class, id).setHoldings(newAmount);
+            System.out.println(newAmount);
+        } catch(Exception e){
+            accountLogger.log(e);
+        } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
     }
 
 

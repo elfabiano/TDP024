@@ -26,7 +26,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -37,3 +38,21 @@ Icon
 
 *.properties
 account-rest/nbproject/private/private.properties
+/todo/todo-data-db-impl/build
+/todo/todo-logic-impl/build/
+/todo/todo-data-api/dist/
+/todo/todo-util/dist/
+/todo/todo-util/build/
+/todo/todo-data-db-impl/dist/
+/todo/todo-data-flatfile-impl/build/
+/todo/todo-logic-api/build/
+/todo/todo-data-flatfile-impl/dist/
+/todo/todo-logic-api/dist/
+/todo/todo-logic-impl/dist/
+/todo/todo-rest/build/
+/todo/todo-rest/dist/
+*.jar
+
+*.jar
+
+*.properties
