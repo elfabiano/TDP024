@@ -51,3 +51,4 @@ account-rest/nbproject/private/private.properties
 /todo/todo-logic-impl/dist/
 /todo/todo-rest/build/
 /todo/todo-rest/dist/
+*/nbprivate/*

@@ -2,6 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/util/StorageFacadeTest.java</file>
+            <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/facade/TransactionEntityFacadeTest.java</file>
+            <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/facade/AccountEntityFacadeTest.java</file>
+        </group>
     </open-files>
 </project-private>
