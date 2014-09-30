@@ -3,6 +3,7 @@ package se.liu.ida.tdp024.account.logic.test.facade;
 import org.junit.After;
 import org.junit.Test;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
+import se.liu.ida.tdp024.account.data.impl.db.util.StorageFacadeDB;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 
 public class AccountLogicFacadeTest {
@@ -10,7 +11,7 @@ public class AccountLogicFacadeTest {
     
     //--- Unit under test ---//
     public AccountLogicFacade accountLogicFacade;
-    public StorageFacade storageFacade;
+    public StorageFacade storageFacade = new StorageFacadeDB();
     
     @After
     public void tearDown() {

@@ -5,10 +5,18 @@
  */
 package se.liu.ida.tdp024.account.logic.api.facade;
 
-/**
- *
- * @author fabwi272
- */
+import java.text.SimpleDateFormat;
+import java.util.List;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
+
 public interface TransactionLogicFacade {
+    public long create(String type, int amount, String status);
     
+    public Transaction find(long id);
+    
+    public List<Transaction> findAll();
+    
+    public void update(long id, String type, int amount, SimpleDateFormat time, String status);
+    
+    public void remove(long id);
 }
