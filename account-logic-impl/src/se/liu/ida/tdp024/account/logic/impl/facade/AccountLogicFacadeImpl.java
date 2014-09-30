@@ -7,10 +7,13 @@ import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
 
 public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
     private AccountEntityFacade accountEntityFacade;
+    private static final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
     
     public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade) {
         this.accountEntityFacade = accountEntityFacade;
@@ -22,13 +25,13 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         //Call SOA service
         HTTPHelper httpHelper = new HTTPHelperImpl();
         
-        String getResult = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" , name);
+        String getResult = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,"Lisa Lisasson");
         
         
-        
-        accountEntityFacade.create(accountType, "", "");
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(getResult);
+        System.out.println("hej");
+        //accountEntityFacade.create(accountType, "", "");
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
