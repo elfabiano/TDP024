@@ -7,8 +7,10 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
+import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
 import se.liu.ida.tdp024.account.util.logger.AccountLogger;
 import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
@@ -123,6 +125,49 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         try {
             em.find(AccountDB.class, id).setHoldings(newAmount);
             System.out.println(newAmount);
+        } catch(Exception e){
+            accountLogger.log(e);
+        } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
+    }
+
+    @Override
+    public void addTransaction(long accountId, long transactionId) {
+        EntityManager em = EMF.getEntityManager();
+        try {
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, accountId);
+            
+            Transaction transaction = em.find(TransactionDB.class, transactionId);
+            
+            transaction.setAccount(account);
+            em.merge(transaction);
+            
+            em.getTransaction().commit();
+        } catch(Exception e){
+            accountLogger.log(e);
+        } finally {
+            if(em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
+    }
+
+    @Override
+    public void remove(long id) {
+        EntityManager em = EMF.getEntityManager();
+        try {
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, id);
+            em.remove(account);
+            em.getTransaction().commit();
         } catch(Exception e){
             accountLogger.log(e);
         } finally {

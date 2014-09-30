@@ -13,6 +13,9 @@ public interface AccountEntityFacade {
     public List<Account> findAll();
     
     public List<Account> findAll(String personKey);
+    
+    public void addTransaction(long accountId, long transactionId);
 
+    public void remove(long id);
     
 }
