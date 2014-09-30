@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="1" time="4.389" timestamp="2014-09-28T08:39:21">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="1" time="3.045" timestamp="2014-09-30T09:40:36">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
@@ -60,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-data-test\build\test\results\TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-data-test\build\junitvmwatcher297498838052313902.properties propsfile=C:\Users\Fabian\Development\TDP024\account-data-test\build\junit810334204259354014.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-data-test\build\test\results\TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-data-test\build\junitvmwatcher3939393782517940580.properties propsfile=C:\Users\Fabian\Development\TDP024\account-data-test\build\junit3112087783260459426.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -415,26 +415,26 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="4.239" />
-  <system-out><![CDATA[[EL Info]: 2014-09-28 10:39:23.462--ServerSession(1732070199)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-09-28 10:39:25.121--ServerSession(1732070199)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-09-28 10:39:25.469--ServerSession(1732070199)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="2.963" />
+  <system-out><![CDATA[[EL Info]: 2014-09-30 11:40:38.148--ServerSession(1674629907)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-09-30 11:40:39.187--ServerSession(1674629907)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-09-30 11:40:39.389--ServerSession(1674629907)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'ALTER TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID
 Query: DataModifyQuery(sql="ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID")
-[EL Warning]: 2014-09-28 10:39:25.476--ServerSession(1732070199)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-09-30 11:40:39.393--ServerSession(1674629907)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'ACCOUNTDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE ACCOUNTDB
 Query: DataModifyQuery(sql="DROP TABLE ACCOUNTDB")
-[EL Warning]: 2014-09-28 10:39:25.561--ServerSession(1732070199)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-09-30 11:40:39.441--ServerSession(1674629907)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE TRANSACTIONDB
 Query: DataModifyQuery(sql="DROP TABLE TRANSACTIONDB")
 1
-[EL Info]: 2014-09-28 10:39:25.985--ServerSession(1732070199)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-09-30 11:40:39.697--ServerSession(1674629907)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
