@@ -38,7 +38,7 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testCreate() {
-        String accType = "Debit";
+        String accType = "Savings";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
         accountLogicFacade.create(accType,name, bank);
@@ -66,8 +66,23 @@ public class AccountLogicFacadeTest {
     }
     
     @Test
+    public void testCredit() {
+        String accType = "Savings";
+        String name = "Lisa Lisasson";
+        String bank = "SWEDBANK";
+        accountLogicFacade.create(accType,name, bank);
+        accountLogicFacade.credit(1, 10);
+        Account account = accountEntityFacade.find(1);
+        List<Transaction> transactions = account.getTransactions();
+        
+        Assert.assertTrue(account.getHoldings() == 10 &&
+                            transactions != null);
+        
+    }
+    
+    @Test
     public void testDebit() {
-        String accType = "Debit";
+        String accType = "Check";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
         accountLogicFacade.create(accType,name, bank);
@@ -76,10 +91,23 @@ public class AccountLogicFacadeTest {
         Account account = accountEntityFacade.find(1);
         List<Transaction> transactions = account.getTransactions();
         
-        System.out.println(account.getHoldings());
+        Assert.assertTrue(account.getHoldings() == 5 &&
+                            transactions != null);
         
-        Assert.assertTrue(account.getHoldings() == 5);
-        //Assert.assertTrue(transactions != null);
+    }
+    
+    @Test
+    public void testTransactions() {
+        String accType = "Check";
+        String name = "Lisa Lisasson";
+        String bank = "SWEDBANK";
+        accountLogicFacade.create(accType,name, bank);
+        accountLogicFacade.credit(1, 10);
+        accountLogicFacade.debit(1, 5);
+        Account account = accountEntityFacade.find(1);
+        List<Transaction> transactions = account.getTransactions();
+        
+        Assert.assertTrue(transactions != null);
         
     }
     

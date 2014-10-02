@@ -124,7 +124,10 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     public void updateAmount(long id, int newAmount) {
         EntityManager em = EMF.getEntityManager();
         try {
-            em.find(Account.class, id).setHoldings(newAmount);
+            Account account = em.find(AccountDB.class, id);
+            em.getTransaction().begin();
+            account.setHoldings(newAmount);
+            em.getTransaction().commit();
         } catch(Exception e){
             accountLogger.log(e);
         } finally {
