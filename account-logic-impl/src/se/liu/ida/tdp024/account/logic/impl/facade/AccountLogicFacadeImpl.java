@@ -36,8 +36,6 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
         Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
         
-        System.out.println(personKey.get("key"));
-        
         String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
         Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
         
