@@ -28,6 +28,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Account account = new AccountDB();
             
             account.setAccountType(accountType);
+            account.setPersonKey(personKey);
             account.setBankKey(bankKey);
             account.setHoldings(0);
             
@@ -123,8 +124,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     public void updateAmount(long id, int newAmount) {
         EntityManager em = EMF.getEntityManager();
         try {
-            em.find(AccountDB.class, id).setHoldings(newAmount);
-            System.out.println(newAmount);
+            em.find(Account.class, id).setHoldings(newAmount);
         } catch(Exception e){
             accountLogger.log(e);
         } finally {

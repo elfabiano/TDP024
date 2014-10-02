@@ -84,3 +84,7 @@ account-rest/build/web/WEB-INF/lib/account-data-api.jar
 account-rest/build/web/WEB-INF/lib/account-data-impl-db.jar
 
 account-rest/build/web/WEB-INF/lib/account-logic-impl.jar
+
+account-logic-test/build/built-jar.properties
+
+account-data-api/dist/account-data-api.jar
