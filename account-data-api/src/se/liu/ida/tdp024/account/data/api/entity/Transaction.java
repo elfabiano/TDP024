@@ -5,14 +5,14 @@
  */
 package se.liu.ida.tdp024.account.data.api.entity;
 
-import java.text.SimpleDateFormat;
-import se.liu.ida.tdp024.account.data.api.entity.Account;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
  * @author fabwi272
  */
-public interface Transaction {
+public interface Transaction extends Serializable {
 
     /**
      * @return the account
@@ -37,7 +37,7 @@ public interface Transaction {
     /**
      * @return the time
      */
-    SimpleDateFormat getTime();
+    Date getTime();
 
     /**
      * @return the type
@@ -67,7 +67,7 @@ public interface Transaction {
     /**
      * @param time the time to set
      */
-    void setTime(SimpleDateFormat time);
+    void setTime(Date time);
 
     /**
      * @param type the type to set

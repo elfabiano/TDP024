@@ -5,7 +5,8 @@
  */
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
-import java.text.SimpleDateFormat;
+import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
@@ -28,7 +29,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
     AccountLogger logger = new AccountLoggerImpl();
     
     @Override
-    public long create(String type, int amount, SimpleDateFormat time, String status) {
+    public long create(String type, int amount, Date time, String status) {
         
         EntityManager em = EMF.getEntityManager();
         
@@ -102,7 +103,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
     }
 
     @Override
-    public void update(long id, String type, int amount, SimpleDateFormat time, String status) {
+    public void update(long id, String type, int amount, Date time, String status) {
         EntityManager em = EMF.getEntityManager();
         
         try {

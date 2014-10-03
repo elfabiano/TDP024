@@ -57,25 +57,33 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     @Override
     public void debit(long id, int amount) {
         Account account = accountEntityFacade.find(id);
+        String status;
         if(transactionVerification.isAcceptable(Constants.TRANSACTION_TYPE_DEBIT, amount, account)) {
             accountEntityFacade.updateAmount(id, account.getHoldings() - amount);
-            transactionLogicFacade.create(Constants.TRANSACTION_TYPE_DEBIT, amount, Constants.TRANSACTION_STATUS_OK);            
+            status = Constants.TRANSACTION_STATUS_OK;
         }
         else {
-            transactionLogicFacade.create(Constants.TRANSACTION_TYPE_DEBIT, amount, Constants.TRANSACTION_STATUS_FAILED);
-        }        
+            status = Constants.TRANSACTION_STATUS_FAILED;
+        }
+        
+        long transactionId = transactionLogicFacade.create(Constants.TRANSACTION_TYPE_DEBIT, amount, status); 
+        accountEntityFacade.addTransaction(id, transactionId);
     }
 
     @Override
     public void credit(long id, int amount) {
         Account account = accountEntityFacade.find(id);
+        String status;
         if(transactionVerification.isAcceptable(Constants.TRANSACTION_TYPE_CREDIT, amount, account)) {
             accountEntityFacade.updateAmount(id, account.getHoldings() + amount);
-            transactionLogicFacade.create(Constants.TRANSACTION_TYPE_CREDIT, amount, Constants.TRANSACTION_STATUS_OK);            
+            status = Constants.TRANSACTION_STATUS_OK;
         }
         else {
-            transactionLogicFacade.create(Constants.TRANSACTION_TYPE_CREDIT, amount, Constants.TRANSACTION_STATUS_FAILED);
+            status = Constants.TRANSACTION_STATUS_FAILED;
         }
+        
+        long transactionId = transactionLogicFacade.create(Constants.TRANSACTION_TYPE_CREDIT, amount, status); 
+        accountEntityFacade.addTransaction(id, transactionId);
     }
 
     @Override

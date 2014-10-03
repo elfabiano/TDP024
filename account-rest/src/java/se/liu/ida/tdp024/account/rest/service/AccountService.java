@@ -24,11 +24,6 @@ public class AccountService {
   public Response create(   @QueryParam("accounttype") String accountType,
                             @QueryParam("name") String name,
                             @QueryParam("bank") String bank) {
-      
-   //TODO: Return fail if fail
-      System.out.println(accountType);
-      System.out.println(name);
-      System.out.println(bank);
 
       accountLogicFacade.create(accountType, name, bank);
 

@@ -61,9 +61,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             accountLogger.log(e);
             return null; 
         } finally {
-            if(em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
             em.close();
         }
            

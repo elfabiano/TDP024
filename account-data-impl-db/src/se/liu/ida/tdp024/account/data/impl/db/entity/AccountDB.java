@@ -1,5 +1,6 @@
 package se.liu.ida.tdp024.account.data.impl.db.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import java.util.List;
 import javax.persistence.Entity;
@@ -7,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import static org.eclipse.persistence.sessions.SessionProfiler.Transaction;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 @Entity
@@ -23,6 +23,7 @@ public class AccountDB implements Account {
     private int holdings;
     
     @OneToMany(mappedBy = "account", targetEntity = TransactionDB.class)
+    @JsonBackReference
     private List<Transaction> transactions;
 
     /**
@@ -105,19 +106,13 @@ public class AccountDB implements Account {
         this.holdings = holdings;
     }
 
-    /**
-     * @return the transaction
-     */
     @Override
     public List<Transaction> getTransactions() {
-        return transactions;
+        return transactions;        
     }
 
-    /**
-     * @param transaction the transaction to set
-     */
     @Override
-    public void setTransactions(List<Transaction> transaction) {
-        this.transactions = transaction;
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;        
     }
 }

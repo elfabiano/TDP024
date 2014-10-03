@@ -5,7 +5,7 @@
  */
 package se.liu.ida.tdp024.account.logic.test.facade;
 
-import java.text.SimpleDateFormat;
+import java.util.Date;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -66,7 +66,7 @@ public class TransactionLogicFacadeTest {
     
     @Test public void updateTest() {
         long id = transactionLogicFacade.create("CREDIT", 2000, "OK");        
-        transactionLogicFacade.update(id, "CREDIT", 1000, new SimpleDateFormat(), "OK");        
+        transactionLogicFacade.update(id, "CREDIT", 1000, new Date(), "OK");        
         Transaction transaction = transactionLogicFacade.find(id);
         
         Assert.assertTrue(transaction.getAmount() == 1000);

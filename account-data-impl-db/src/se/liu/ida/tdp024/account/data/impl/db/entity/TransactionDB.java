@@ -5,13 +5,17 @@
  */
 package se.liu.ida.tdp024.account.data.impl.db.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.Date;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
-import java.text.SimpleDateFormat;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 /**
@@ -26,10 +30,13 @@ public class TransactionDB implements Transaction {
     private long id;
     private String type;
     private int amount;
-    private SimpleDateFormat time;
-    private String status;
     
+    @Temporal(javax.persistence.TemporalType.TIME)
+    private Date time;
+    private String status;
+
     @ManyToOne(targetEntity = AccountDB.class)
+    @JsonManagedReference
     private Account account;
 
     /**
@@ -84,7 +91,7 @@ public class TransactionDB implements Transaction {
      * @return the time
      */
     @Override
-    public SimpleDateFormat getTime() {
+    public Date getTime() {
         return time;
     }
 
@@ -92,7 +99,7 @@ public class TransactionDB implements Transaction {
      * @param time the time to set
      */
     @Override
-    public void setTime(SimpleDateFormat time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 
@@ -126,6 +133,12 @@ public class TransactionDB implements Transaction {
     @Override
     public void setAccount(Account account) {
         this.account = account;
+    }
+    
+    @PrePersist
+    @PreUpdate       
+    void modifiedAt() {
+        this.time = new Date();
     }
     
 }
