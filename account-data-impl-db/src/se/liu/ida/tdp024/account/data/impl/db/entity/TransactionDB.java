@@ -6,6 +6,7 @@
 package se.liu.ida.tdp024.account.data.impl.db.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.Calendar;
 import java.util.Date;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import javax.persistence.Entity;
@@ -16,6 +17,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 /**
@@ -31,7 +33,7 @@ public class TransactionDB implements Transaction {
     private String type;
     private int amount;
     
-    @Temporal(javax.persistence.TemporalType.TIME)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date time;
     private String status;
 
@@ -138,7 +140,7 @@ public class TransactionDB implements Transaction {
     @PrePersist
     @PreUpdate       
     void modifiedAt() {
-        this.time = new Date();
+        this.time = Calendar.getInstance().getTime();
     }
     
 }

@@ -5,7 +5,6 @@
  */
 package se.liu.ida.tdp024.account.logic.api.facade;
 
-import java.util.Date;
 import java.util.List;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 
@@ -16,7 +15,7 @@ public interface TransactionLogicFacade {
     
     public List<Transaction> findAll();
     
-    public void update(long id, String type, int amount, Date time, String status);
+    public void update(long id, String type, int amount, String status);
     
     public void remove(long id);
 }

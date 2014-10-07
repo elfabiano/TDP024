@@ -74,6 +74,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     public void credit(long id, int amount) {
         Account account = accountEntityFacade.find(id);
         String status;
+        System.out.println("credit");
         if(transactionVerification.isAcceptable(Constants.TRANSACTION_TYPE_CREDIT, amount, account)) {
             accountEntityFacade.updateAmount(id, account.getHoldings() + amount);
             status = Constants.TRANSACTION_STATUS_OK;

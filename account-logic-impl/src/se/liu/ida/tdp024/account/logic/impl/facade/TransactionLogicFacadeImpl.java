@@ -5,8 +5,6 @@
  */
 package se.liu.ida.tdp024.account.logic.impl.facade;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
@@ -21,12 +19,12 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
     private final TransactionEntityFacade transactionEntityFacade;
     
     public TransactionLogicFacadeImpl(TransactionEntityFacade transactionEntityFacade) {
-        this.transactionEntityFacade= transactionEntityFacade;
+        this.transactionEntityFacade = transactionEntityFacade;
     }
 
     @Override
     public long create(String type, int amount, String status) {
-        return transactionEntityFacade.create(type, amount, new Date(), status);
+        return transactionEntityFacade.create(type, amount, status);
     }
     
     @Override
@@ -40,8 +38,8 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
     }
 
     @Override
-    public void update(long id, String type, int amount, Date time, String status) {
-        transactionEntityFacade.update(id, type, amount, time, status);
+    public void update(long id, String type, int amount, String status) {
+        transactionEntityFacade.update(id, type, amount, status);
     }
 
     @Override
