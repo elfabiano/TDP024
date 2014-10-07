@@ -34,20 +34,18 @@ public class TransactionEntityFacadeTest {
     public void createTest() {
         String type = "DEBIT";
         int amount = 5000;
-        Date time = new Date();
         String status = "OK";
         long id;
         id = -1;
         
-        id = transactionEntityFacade.create(type, amount, time, status);
+        id = transactionEntityFacade.create(type, amount, status);
 
         Assert.assertFalse(-1 == id);
     }
     
     @Test
     public void findTest() {
-        long id = transactionEntityFacade.create("DEBIT", 4000,
-                                new Date(), "OK");
+        long id = transactionEntityFacade.create("DEBIT", 4000, "OK");
         
         Assert.assertTrue(transactionEntityFacade.find(id) != null);
     }
@@ -56,11 +54,11 @@ public class TransactionEntityFacadeTest {
     public void findAllTest() {
         storageFacade.emptyStorage();
         
-        transactionEntityFacade.create("DEBIT", 5000, new Date(), "OK");
-        transactionEntityFacade.create("CREDIT", 4000, new Date(), "OK");
-        transactionEntityFacade.create("DEBIT", 3000, new Date(), "OK");
-        transactionEntityFacade.create("DEBIT", 2000, new Date(), "OK");
-        transactionEntityFacade.create("DEBIT", 1000, new Date(), "OK");
+        transactionEntityFacade.create("DEBIT", 5000, "OK");
+        transactionEntityFacade.create("CREDIT", 4000, "OK");
+        transactionEntityFacade.create("DEBIT", 3000, "OK");
+        transactionEntityFacade.create("DEBIT", 2000, "OK");
+        transactionEntityFacade.create("DEBIT", 1000, "OK");
         
         List<Transaction> transactions = transactionEntityFacade.findAll();
         
@@ -69,10 +67,8 @@ public class TransactionEntityFacadeTest {
     
     @Test
     public void updateTest() {
-        long id = transactionEntityFacade.create("DEBIT", 5000,
-                new Date(), "OK");
-        transactionEntityFacade.update(id, "CREDIT", 5000,
-                new Date(), "OK");
+        long id = transactionEntityFacade.create("DEBIT", 5000, "OK");
+        transactionEntityFacade.update(id, "CREDIT", 5000, "OK");
         Transaction transaction = transactionEntityFacade.find(id);
         
         Assert.assertTrue(transaction.getType().equals("CREDIT"));
@@ -80,8 +76,7 @@ public class TransactionEntityFacadeTest {
     
     @Test
     public void removeTest() {
-        long id = transactionEntityFacade.create("CREDIT", 2000,
-                new Date(), "OK");
+        long id = transactionEntityFacade.create("CREDIT", 2000, "OK");
         
         transactionEntityFacade.remove(id);
         

@@ -66,7 +66,7 @@ public class TransactionLogicFacadeTest {
     
     @Test public void updateTest() {
         long id = transactionLogicFacade.create("CREDIT", 2000, "OK");        
-        transactionLogicFacade.update(id, "CREDIT", 1000, new Date(), "OK");        
+        transactionLogicFacade.update(id, "CREDIT", 1000, "OK");        
         Transaction transaction = transactionLogicFacade.find(id);
         
         Assert.assertTrue(transaction.getAmount() == 1000);
