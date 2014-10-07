@@ -115,3 +115,4 @@ account-rest/build/web/WEB-INF/lib/account-logic-impl.jar
 
 account-data-api/nbproject/private/private.properties
 account-data-api/build/built-jar.properties
+/account-xfinal-test/build/

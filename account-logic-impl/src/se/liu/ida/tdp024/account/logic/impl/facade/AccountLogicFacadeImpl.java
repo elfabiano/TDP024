@@ -28,7 +28,14 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     }
 
     @Override
-    public void create(String accountType, String name, String bank) {
+    public void create(String accountType, String name, String bank) throws Exception {
+        
+        
+        
+        if (accountType.equals(Constants.ACCOUNT_TYPE_CHECK) || accountType.equals(Constants.ACCOUNT_TYPE_SAVINGS)){
+            throw new Exception();
+        }
+        
         
         //Call SOA service
         HTTPHelper httpHelper = new HTTPHelperImpl();
@@ -36,12 +43,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
         Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
         
+        
         String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
         Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
         
         
         accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
-        
     }
 
     @Override

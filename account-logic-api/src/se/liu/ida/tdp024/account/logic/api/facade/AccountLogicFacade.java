@@ -6,7 +6,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 
 
 public interface AccountLogicFacade {
-    public void create(String accountType, String name, String bank);
+    public void create(String accountType, String name, String bank) throws Exception;
     
     public List<Account> find(String name);
     

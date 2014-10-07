@@ -9,6 +9,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
+import se.liu.ida.tdp024.account.logic.impl.constants.Constants;
 import se.liu.ida.tdp024.account.logic.impl.facade.AccountLogicFacadeImpl;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
@@ -24,10 +25,18 @@ public class AccountService {
   public Response create(   @QueryParam("accounttype") String accountType,
                             @QueryParam("name") String name,
                             @QueryParam("bank") String bank) {
-
-      accountLogicFacade.create(accountType, name, bank);
-
-      return Response.ok().build();
+      
+      String response = Constants.TRANSACTION_STATUS_FAILED;
+      
+      try {
+          accountLogicFacade.create(accountType, name, bank);
+          response = Constants.TRANSACTION_STATUS_OK;
+      }
+      catch (Exception e){
+      }
+      finally{
+          return Response.ok().entity(response).build();
+      }
   }
   
   @GET
@@ -42,25 +51,33 @@ public class AccountService {
   @GET
   @Path("debit")
   public Response debit(@QueryParam("id") long id,
-                        @QueryParam("amount") int amount) {      
+                        @QueryParam("amount") int amount) {  
+      String response = Constants.TRANSACTION_STATUS_FAILED;
       try {
         accountLogicFacade.debit(id, amount);
+        response = Constants.TRANSACTION_STATUS_OK;
       } catch (Exception e) {
-          return Response.notModified().build();
       }
-      return Response.ok().build();
+      finally{
+          return Response.ok().entity(response).build();
+      }
     }
   
   @GET
   @Path("credit")
   public Response credit(@QueryParam("id") long id,
                          @QueryParam("amount") int amount) {
+      
+      String response = Constants.TRANSACTION_STATUS_FAILED;
       try {
         accountLogicFacade.credit(id, amount);
+        response = Constants.TRANSACTION_STATUS_OK;
       } catch (Exception e) {
           return Response.notModified().build();
       }
-      return Response.ok().build();
+      finally{
+          return Response.ok().entity(response).build();
+      }
     }
   
   @GET
