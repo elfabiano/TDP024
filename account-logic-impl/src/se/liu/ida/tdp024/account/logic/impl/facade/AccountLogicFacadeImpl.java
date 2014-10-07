@@ -32,23 +32,26 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         
         
         
-        if (accountType.equals(Constants.ACCOUNT_TYPE_CHECK) || accountType.equals(Constants.ACCOUNT_TYPE_SAVINGS)){
+        if (accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS)){
+            //Call SOA service
+            HTTPHelper httpHelper = new HTTPHelperImpl();
+
+            String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
+            Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
+
+
+            String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
+            Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
+
+
+            accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
+        }
+        else{
             throw new Exception();
         }
         
         
-        //Call SOA service
-        HTTPHelper httpHelper = new HTTPHelperImpl();
         
-        String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
-        Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
-        
-        
-        String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
-        Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
-        
-        
-        accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
     }
 
     @Override
