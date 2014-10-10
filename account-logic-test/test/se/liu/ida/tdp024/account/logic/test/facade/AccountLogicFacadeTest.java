@@ -56,14 +56,14 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testFind() throws Exception {
-        String accType = "Debit";
+        String accType = "CHECK";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
         accountLogicFacade.create(accType,name, bank);
         List<Account> results = accountLogicFacade.find(name);
         Account account = accountEntityFacade.find(1);
         Assert.assertFalse(results.isEmpty());
-        Assert.assertTrue(results.get(1).getId() == account.getId());
+        Assert.assertTrue(results.get(0).getId() == account.getId());
     
     }
     
@@ -102,10 +102,10 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testTransactions() throws Exception {
-//        String accType = "CHECK";
+        String accType = "CHECK";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-            accountLogicFacade.create("CHECK",name, bank);
+            accountLogicFacade.create(accType,name, bank);
 
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);

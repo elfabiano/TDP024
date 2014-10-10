@@ -28,11 +28,8 @@ public class AccountService {
                             @QueryParam("name") String name,
                             @QueryParam("bank") String bank) {
       
-      String response = Constants.TRANSACTION_STATUS_FAILED;
-      
       try {
           accountLogicFacade.create(accountType, name, bank);
-          response = Constants.TRANSACTION_STATUS_OK;
           return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       }
       catch (Exception e){
@@ -43,33 +40,27 @@ public class AccountService {
   @GET
   @Path("find/name")
   public Response find(@QueryParam("name") String name) {
-      String json = "";
       
       try {
             List<Account> accounts;
             accounts = accountLogicFacade.find(name);
-            json = jsonSerializer.toJson(accounts);
+            String json = jsonSerializer.toJson(accounts);
+            return Response.ok().entity(json).build();
         } catch (Exception ex) {
             Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
-        }
-      if (json.equals("")){
-          json = jsonSerializer.toJson("[]");
-      }
-      return Response.ok().entity(json).build();
+            return Response.ok().entity("[]").build();
+        }      
   }
   
   @GET
   @Path("debit")
   public Response debit(@QueryParam("id") long id,
                         @QueryParam("amount") int amount) {  
-      String response = Constants.TRANSACTION_STATUS_FAILED;
       try {
         accountLogicFacade.debit(id, amount);
-        response = Constants.TRANSACTION_STATUS_OK;
+        return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       } catch (Exception e) {
-      }
-      finally{
-          return Response.ok().entity(response).build();
+          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
     }
   
@@ -77,16 +68,11 @@ public class AccountService {
   @Path("credit")
   public Response credit(@QueryParam("id") long id,
                          @QueryParam("amount") int amount) {
-      
-      String response = Constants.TRANSACTION_STATUS_FAILED;
       try {
         accountLogicFacade.credit(id, amount);
-        response = Constants.TRANSACTION_STATUS_OK;
+        return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       } catch (Exception e) {
-          return Response.notModified().build();
-      }
-      finally{
-          return Response.ok().entity(response).build();
+          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
     }
   

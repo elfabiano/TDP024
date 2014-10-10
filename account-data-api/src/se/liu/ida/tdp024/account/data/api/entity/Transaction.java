@@ -37,7 +37,7 @@ public interface Transaction extends Serializable {
     /**
      * @return the time
      */
-    Date getTime();
+    Date getCreated();
 
     /**
      * @return the type
@@ -67,7 +67,7 @@ public interface Transaction extends Serializable {
     /**
      * @param time the time to set
      */
-    void setTime(Date time);
+    void setCreated(Date time);
 
     /**
      * @param type the type to set

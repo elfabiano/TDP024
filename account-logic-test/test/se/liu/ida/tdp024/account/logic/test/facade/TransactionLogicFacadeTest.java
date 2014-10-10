@@ -5,7 +5,6 @@
  */
 package se.liu.ida.tdp024.account.logic.test.facade;
 
-import java.util.Date;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -42,7 +41,7 @@ public class TransactionLogicFacadeTest {
         Transaction transaction = transactionEntityFacade.find(id);
         Assert.assertTrue(  transaction != null &&
                             transaction.getAmount() == 1000 &&
-                            transaction.getTime() != null);
+                            transaction.getCreated() != null);
     }
     
     @Test

@@ -34,7 +34,7 @@ public class TransactionDB implements Transaction {
     private int amount;
     
     @Temporal(TemporalType.TIMESTAMP)
-    private Date time;
+    private Date created;
     private String status;
 
     @ManyToOne(targetEntity = AccountDB.class)
@@ -93,16 +93,16 @@ public class TransactionDB implements Transaction {
      * @return the time
      */
     @Override
-    public Date getTime() {
-        return time;
+    public Date getCreated() {
+        return created;
     }
 
     /**
      * @param time the time to set
      */
     @Override
-    public void setTime(Date time) {
-        this.time = time;
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
     /**
@@ -140,7 +140,7 @@ public class TransactionDB implements Transaction {
     @PrePersist
     @PreUpdate       
     void modifiedAt() {
-        this.time = Calendar.getInstance().getTime();
+        this.created = Calendar.getInstance().getTime();
     }
     
 }
