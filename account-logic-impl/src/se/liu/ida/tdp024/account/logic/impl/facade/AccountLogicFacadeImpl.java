@@ -33,7 +33,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         
         System.out.println(accountType);
         System.out.println(Constants.ACCOUNT_TYPE_CHECK);
-        if (accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS)){
+        if (!(accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS))){
             throw new Exception();
         
         }    
@@ -42,25 +42,24 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         HTTPHelper httpHelper = new HTTPHelperImpl();
 
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
-        Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
-
-
         String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
+        
+        if (getPerson == null || getBank == null){
+            throw new Exception();
+        }
+        Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
         Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
 
-
-        accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
-        
-        
-        
+        accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));      
     }
 
     @Override
-    public List<Account> find(String name) {
+    public List<Account> find(String name) throws Exception{
         HTTPHelper httpHelper = new HTTPHelperImpl();
         
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" , name);
         Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
+       
         
         return accountEntityFacade.findAll(personKey.get("key"));
     }
