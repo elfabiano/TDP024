@@ -33,9 +33,8 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         
         System.out.println(accountType);
         System.out.println(Constants.ACCOUNT_TYPE_CHECK);
-        if (accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS)){
-            throw new Exception();
-        
+        if (!(accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS))){
+            throw new Exception();        
         }    
             
         //Call SOA service

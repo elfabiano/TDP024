@@ -1,6 +1,8 @@
 package se.liu.ida.tdp024.account.logic.test.facade;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -41,7 +43,11 @@ public class AccountLogicFacadeTest {
         String accType = "Savings";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        accountLogicFacade.create(accType,name, bank);
+        try {
+            accountLogicFacade.create(accType,name, bank);
+        } catch (Exception ex) {
+            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         Account account = accountEntityFacade.find(1);
         Assert.assertTrue(  account != null &&
@@ -53,24 +59,26 @@ public class AccountLogicFacadeTest {
     }
     
     @Test
-    public void testFind() {
+    public void testFind() throws Exception {
         String accType = "Debit";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
         accountLogicFacade.create(accType,name, bank);
-        
         List<Account> results = accountLogicFacade.find(name);
         Account account = accountEntityFacade.find(1);
-        Assert.assertTrue(results.get(0).getId() == account.getId());
-        
+        Assert.assertFalse(results.isEmpty());
+        Assert.assertTrue(results.get(1).getId() == account.getId());
+    
     }
     
     @Test
-    public void testCredit() {
+    public void testCredit() throws Exception {
         String accType = "Savings";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
+
         accountLogicFacade.create(accType,name, bank);
+
         accountLogicFacade.credit(1, 10);
         Account account = accountEntityFacade.find(1);
         List<Transaction> transactions = account.getTransactions();
@@ -85,7 +93,11 @@ public class AccountLogicFacadeTest {
         String accType = "Check";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        accountLogicFacade.create(accType,name, bank);
+        try {
+            accountLogicFacade.create(accType,name, bank);
+        } catch (Exception ex) {
+            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);
         Account account = accountEntityFacade.find(1);
@@ -101,7 +113,11 @@ public class AccountLogicFacadeTest {
         String accType = "Check";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        accountLogicFacade.create(accType,name, bank);
+        try {
+            accountLogicFacade.create(accType,name, bank);
+        } catch (Exception ex) {
+            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);
         Account account = accountEntityFacade.find(1);

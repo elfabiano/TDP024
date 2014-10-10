@@ -31,11 +31,10 @@ public class AccountService {
       try {
           accountLogicFacade.create(accountType, name, bank);
           response = Constants.TRANSACTION_STATUS_OK;
+          return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       }
       catch (Exception e){
-      }
-      finally{
-          return Response.ok().entity(response).build();
+          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
   }
   
