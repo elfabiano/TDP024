@@ -29,13 +29,10 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
 
     @Override
     public void create(String accountType, String name, String bank) throws Exception {
-        
-        
-        System.out.println(accountType);
-        System.out.println(Constants.ACCOUNT_TYPE_CHECK);
-        if (!(accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS))){
-            throw new Exception();        
-        }    
+                
+        if (!(accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS))) {        
+            throw new Exception();
+        }
             
         //Call SOA service
         HTTPHelper httpHelper = new HTTPHelperImpl();

@@ -39,15 +39,11 @@ public class AccountLogicFacadeTest {
     
     
     @Test
-    public void testCreate() {
+    public void testCreate() throws Exception {
         String accType = "Savings";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        try {
-            accountLogicFacade.create(accType,name, bank);
-        } catch (Exception ex) {
-            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        accountLogicFacade.create(accType,name, bank);
         
         Account account = accountEntityFacade.find(1);
         Assert.assertTrue(  account != null &&
@@ -89,15 +85,11 @@ public class AccountLogicFacadeTest {
     }
     
     @Test
-    public void testDebit() {
+    public void testDebit() throws Exception {
         String accType = "Check";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        try {
-            accountLogicFacade.create(accType,name, bank);
-        } catch (Exception ex) {
-            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        accountLogicFacade.create(accType,name, bank);
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);
         Account account = accountEntityFacade.find(1);
@@ -109,15 +101,12 @@ public class AccountLogicFacadeTest {
     }
     
     @Test
-    public void testTransactions() {
-        String accType = "Check";
+    public void testTransactions() throws Exception {
+//        String accType = "CHECK";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-        try {
-            accountLogicFacade.create(accType,name, bank);
-        } catch (Exception ex) {
-            Logger.getLogger(AccountLogicFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            accountLogicFacade.create("CHECK",name, bank);
+
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);
         Account account = accountEntityFacade.find(1);

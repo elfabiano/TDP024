@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" skipped="0" tests="5" time="3.188" timestamp="2014-10-10T09:53:55">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" skipped="0" tests="5" time="3.252" timestamp="2014-10-10T10:43:35">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
@@ -62,7 +62,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-logic-test\build\test\results\TEST-se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-logic-test\build\junitvmwatcher6318136421122983645.properties propsfile=C:\Users\Fabian\Development\TDP024\account-logic-test\build\junit5610529410469936972.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-logic-test\build\test\results\TEST-se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-logic-test\build\junitvmwatcher2072843565538726822.properties propsfile=C:\Users\Fabian\Development\TDP024\account-logic-test\build\junit5184508670549718833.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -433,61 +433,61 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="createTest" time="2.497" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="findTest" time="0.179" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="updateTest" time="0.15" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="removeTest" time="0.115" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="findAllTest" time="0.161" />
-  <system-out><![CDATA[[EL Info]: 2014-10-10 11:53:56.464--ServerSession(285416048)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-10 11:53:57.417--ServerSession(285416048)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-10-10 11:53:57.62--ServerSession(285416048)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="createTest" time="2.543" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="findTest" time="0.171" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="updateTest" time="0.147" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="findAllTest" time="0.148" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.TransactionLogicFacadeTest" name="removeTest" time="0.159" />
+  <system-out><![CDATA[[EL Info]: 2014-10-10 12:43:36.974--ServerSession(133181906)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-10 12:43:37.939--ServerSession(133181906)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-10-10 12:43:38.144--ServerSession(133181906)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'ALTER TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID
 Query: DataModifyQuery(sql="ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID")
-[EL Warning]: 2014-10-10 11:53:57.624--ServerSession(285416048)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-10 12:43:38.148--ServerSession(133181906)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'ACCOUNTDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE ACCOUNTDB
 Query: DataModifyQuery(sql="DROP TABLE ACCOUNTDB")
-[EL Warning]: 2014-10-10 11:53:57.674--ServerSession(285416048)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-10 12:43:38.194--ServerSession(133181906)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE TRANSACTIONDB
 Query: DataModifyQuery(sql="DROP TABLE TRANSACTIONDB")
-[EL Info]: 2014-10-10 11:53:57.947--ServerSession(285416048)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
-[EL Info]: 2014-10-10 11:53:57.963--ServerSession(1136867564)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-10 11:53:57.967--ServerSession(1136867564)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-10-10 11:53:58.104--ServerSession(1136867564)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-10 12:43:38.469--ServerSession(133181906)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-10-10 12:43:38.487--ServerSession(1922307521)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-10 12:43:38.492--ServerSession(1922307521)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-10-10 12:43:38.612--ServerSession(1922307521)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-10 11:53:58.128--ServerSession(1136867564)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
-[EL Info]: 2014-10-10 11:53:58.148--ServerSession(1463805753)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-10 11:53:58.152--ServerSession(1463805753)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-10-10 11:53:58.246--ServerSession(1463805753)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-10 12:43:38.641--ServerSession(1922307521)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-10-10 12:43:38.662--ServerSession(20794619)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-10 12:43:38.668--ServerSession(20794619)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-10-10 12:43:38.754--ServerSession(20794619)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-10 11:53:58.28--ServerSession(1463805753)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
-[EL Info]: 2014-10-10 11:53:58.292--ServerSession(1191354561)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-10 11:53:58.296--ServerSession(1191354561)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-10-10 11:53:58.365--ServerSession(1191354561)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-10 12:43:38.79--ServerSession(20794619)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-10-10 12:43:38.802--ServerSession(460179145)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-10 12:43:38.806--ServerSession(460179145)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-10-10 12:43:38.877--ServerSession(460179145)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-10 11:53:58.395--ServerSession(1191354561)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
-[EL Info]: 2014-10-10 11:53:58.408--ServerSession(1140842215)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-10 11:53:58.411--ServerSession(1140842215)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
-[EL Warning]: 2014-10-10 11:53:58.495--ServerSession(1140842215)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-10 12:43:38.938--ServerSession(460179145)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-10-10 12:43:38.956--ServerSession(1403367223)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-10 12:43:38.962--ServerSession(1403367223)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU login successful
+[EL Warning]: 2014-10-10 12:43:39.054--ServerSession(1403367223)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-10 11:53:58.557--ServerSession(1140842215)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
+[EL Info]: 2014-10-10 12:43:39.098--ServerSession(1403367223)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/dist/account-data-impl-db.jar_account-dataPU logout successful
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
