@@ -1,6 +1,8 @@
 package se.liu.ida.tdp024.account.rest.service;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
@@ -41,9 +43,18 @@ public class AccountService {
   @GET
   @Path("find/name")
   public Response find(@QueryParam("name") String name) {
-      List<Account> accounts = accountLogicFacade.find(name);
-      String json = jsonSerializer.toJson(accounts);
+      String json = "";
       
+      try {
+            List<Account> accounts;
+            accounts = accountLogicFacade.find(name);
+            json = jsonSerializer.toJson(accounts);
+        } catch (Exception ex) {
+            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      if (json.equals("")){
+          json = jsonSerializer.toJson("[]");
+      }
       return Response.ok().entity(json).build();
   }
   
