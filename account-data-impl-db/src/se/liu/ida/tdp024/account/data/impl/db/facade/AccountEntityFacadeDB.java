@@ -138,22 +138,27 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
                     status = Constants.TRANSACTION_STATUS_OK;
                 } 
                 else {                    
-                    status = Constants.TRANSACTION_STATUS_FAILED;
-                    long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
-                    addTransaction(id, transactionId);
-                    throw new Exception("transaction failed");
+                    status = Constants.TRANSACTION_STATUS_FAILED;                    
                 }
             }
             else {
-                account.setHoldings(account.getHoldings() + change);
-                status = Constants.TRANSACTION_STATUS_OK;
                 transactionType = Constants.TRANSACTION_TYPE_CREDIT;
-            }
+                account.setHoldings(account.getHoldings() + change);
+                status = Constants.TRANSACTION_STATUS_OK;                
+            }           
         
             long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
-            addTransaction(id, transactionId);
+            Transaction transaction = em.find(TransactionDB.class, transactionId);
+            transaction.setAccount(account);
+            em.merge(transaction);
             em.merge(account);
             em.getTransaction().commit();
+            
+            if(status.equals(Constants.TRANSACTION_STATUS_FAILED)) {
+                em.close();
+                throw new Exception("transaction failed");
+            }
+            
         } catch(Exception e){
             accountLogger.log(e);
         }

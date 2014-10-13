@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="1" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="47.609" timestamp="2014-10-13T16:44:12">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="46.955" timestamp="2014-10-13T18:30:52">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
@@ -62,7 +62,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher8275713605460146093.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit5684878074892486458.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher7341460013013687475.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit1547940918906495223.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -105,7 +105,7 @@
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
     <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
-    <property name="javac.includesfile.binary" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\null1636911026" />
+    <property name="javac.includesfile.binary" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\null1175145362" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="true" />
     <property name="javac.test.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
@@ -420,19 +420,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="24.778" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="21.787">
-    <failure message="expected:&lt;10000&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;10000&gt; but was:&lt;0&gt;
-	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testCreditConcurrency(TransactionTest.java:227)
-</failure>
-  </testcase>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.975">
-    <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:604)
-	at java.util.ArrayList.get(ArrayList.java:382)
-	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testFind(TransactionTest.java:74)
-</error>
-  </testcase>
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="2.417" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="21.883" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="22.588" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
