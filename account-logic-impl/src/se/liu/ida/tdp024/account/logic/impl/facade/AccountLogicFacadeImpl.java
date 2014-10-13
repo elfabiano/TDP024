@@ -2,15 +2,16 @@ package se.liu.ida.tdp024.account.logic.impl.facade;
 
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.eclipse.persistence.exceptions.OptimisticLockException;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.Constants;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.TransactionLogicFacade;
-import se.liu.ida.tdp024.account.logic.api.rules.TransactionVerification;
-import se.liu.ida.tdp024.account.logic.impl.constants.Constants;
-import se.liu.ida.tdp024.account.logic.impl.rules.BasicTransactionVerification;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
@@ -18,8 +19,7 @@ import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
 
 public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
-    private AccountEntityFacade accountEntityFacade;
-    private TransactionVerification transactionVerification = new BasicTransactionVerification();
+    private AccountEntityFacade accountEntityFacade;    
     private static final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
     private TransactionLogicFacade transactionLogicFacade = new TransactionLogicFacadeImpl(new TransactionEntityFacadeDB());
     
@@ -63,35 +63,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
 
     @Override
     public void debit(long id, int amount) {
-        Account account = accountEntityFacade.find(id);
-        String status;
-        if(transactionVerification.isAcceptable(Constants.TRANSACTION_TYPE_DEBIT, amount, account)) {
-            accountEntityFacade.updateAmount(id, account.getHoldings() - amount);
-            status = Constants.TRANSACTION_STATUS_OK;
-        }
-        else {
-            status = Constants.TRANSACTION_STATUS_FAILED;
-        }
-        
-        long transactionId = transactionLogicFacade.create(Constants.TRANSACTION_TYPE_DEBIT, amount, status); 
-        accountEntityFacade.addTransaction(id, transactionId);
+        accountEntityFacade.updateAmount(id, -amount);
     }
 
     @Override
     public void credit(long id, int amount) {
-        Account account = accountEntityFacade.find(id);
-        String status;
-        System.out.println("credit");
-        if(transactionVerification.isAcceptable(Constants.TRANSACTION_TYPE_CREDIT, amount, account)) {
-            accountEntityFacade.updateAmount(id, account.getHoldings() + amount);
-            status = Constants.TRANSACTION_STATUS_OK;
-        }
-        else {
-            status = Constants.TRANSACTION_STATUS_FAILED;
-        }
-        
-        long transactionId = transactionLogicFacade.create(Constants.TRANSACTION_TYPE_CREDIT, amount, status); 
-        accountEntityFacade.addTransaction(id, transactionId);
+        accountEntityFacade.updateAmount(id, amount);
     }
 
     @Override

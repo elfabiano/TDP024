@@ -67,5 +67,4 @@ public interface Account extends Serializable {
     void setPersonKey(String personKey);
     
     void setTransactions(List<Transaction> transactions);
-    
 }

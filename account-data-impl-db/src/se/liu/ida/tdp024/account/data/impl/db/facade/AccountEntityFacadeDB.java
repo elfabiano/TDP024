@@ -1,7 +1,9 @@
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
+import static java.lang.StrictMath.abs;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.LockModeType;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -9,8 +11,10 @@ import javax.persistence.criteria.Root;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
+import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
 import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.Constants;
 import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
 import se.liu.ida.tdp024.account.util.logger.AccountLogger;
 import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
@@ -18,6 +22,7 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 public class AccountEntityFacadeDB implements AccountEntityFacade {
     
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
+    private TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     
     @Override
     public long create(String accountType, String personKey, String bankKey) {
@@ -35,27 +40,23 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.persist(account);
             em.getTransaction().commit();
             
-            return account.getId();
-            
+            return account.getId();            
         }
         catch(Exception e){
-            System.out.println(e);
             accountLogger.log(e);
             return 0;
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
-            }
-            
+            }            
             em.close();
         }
-        
     }
 
     @Override
     public Account find(long id) {
         EntityManager em = EMF.getEntityManager();
-        try {
+        try {            
             return em.find(AccountDB.class, id);
         } catch(Exception e){
             accountLogger.log(e);
@@ -104,7 +105,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
             TypedQuery<Account> q = em.createQuery(cq);
             List<Account> results = q.getResultList();
-            
+                        
             return results;
         } catch(Exception e){
             accountLogger.log(e);
@@ -118,16 +119,45 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void updateAmount(long id, int newAmount) {
+    public void updateAmount(long id, int change) {
         EntityManager em = EMF.getEntityManager();
-        try {
-            Account account = em.find(AccountDB.class, id);
+        try {            
             em.getTransaction().begin();
-            account.setHoldings(newAmount);
+            Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
+        
+            String status;
+            String transactionType;
+            
+            System.out.println("updateAmount, change: " + change);
+        
+            if(change < 0) { 
+                transactionType = Constants.TRANSACTION_TYPE_DEBIT;
+                if(account.getHoldings() >= -change) {             
+            
+                    account.setHoldings(account.getHoldings() + change);
+                    status = Constants.TRANSACTION_STATUS_OK;
+                } 
+                else {                    
+                    status = Constants.TRANSACTION_STATUS_FAILED;
+                    long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
+                    addTransaction(id, transactionId);
+                    throw new Exception("transaction failed");
+                }
+            }
+            else {
+                account.setHoldings(account.getHoldings() + change);
+                status = Constants.TRANSACTION_STATUS_OK;
+                transactionType = Constants.TRANSACTION_TYPE_CREDIT;
+            }
+        
+            long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
+            addTransaction(id, transactionId);
+            em.merge(account);
             em.getTransaction().commit();
         } catch(Exception e){
             accountLogger.log(e);
-        } finally {
+        }
+        finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }
@@ -149,7 +179,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.merge(transaction);
             
             em.getTransaction().commit();
-        } catch(Exception e){
+        }
+        catch(Exception e){
             accountLogger.log(e);
         } finally {
             if(em.getTransaction().isActive()) {

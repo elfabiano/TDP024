@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
+import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
+import se.liu.ida.tdp024.account.data.impl.db.util.StorageFacadeDB;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
@@ -18,10 +20,11 @@ public class TransactionTest {
 
     private static final HTTPHelper httpHelper = new HTTPHelperImpl();
     private static final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
+    private final StorageFacade storageFacade = new StorageFacadeDB();
 
     @Test
     public void testFind() {
-
+        storageFacade.emptyStorage();
 
         {
             String name = "Marcus Bendtsen";
@@ -108,6 +111,7 @@ public class TransactionTest {
 
     @Test
     public void testDebitConcurrency() {
+        storageFacade.emptyStorage();
 
         {
             String name = "Jakob Pogulis";
@@ -169,6 +173,7 @@ public class TransactionTest {
     
     @Test
     public void testCreditConcurrency() {
+        storageFacade.emptyStorage();
         
          {
             String name = "Zorro";

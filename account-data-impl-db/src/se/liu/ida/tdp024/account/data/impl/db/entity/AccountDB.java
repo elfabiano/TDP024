@@ -8,20 +8,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Version;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 @Entity
 public class AccountDB implements Account {
-    
+
+    @Version
+    protected long version;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    
+
     private String personKey;
     private String accountType;
-    private String  bankKey;
+    private String bankKey;
     private int holdings;
-    
+
     @OneToMany(mappedBy = "account", targetEntity = TransactionDB.class)
     @JsonBackReference
     private List<Transaction> transactions;
@@ -108,11 +112,11 @@ public class AccountDB implements Account {
 
     @Override
     public List<Transaction> getTransactions() {
-        return transactions;        
+        return transactions;
     }
 
     @Override
     public void setTransactions(List<Transaction> transactions) {
-        this.transactions = transactions;        
+        this.transactions = transactions;
     }
 }
