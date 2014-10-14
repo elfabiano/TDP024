@@ -5,9 +5,6 @@
  */
 package se.liu.ida.tdp024.account.data.test.facade;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import org.junit.After;
 import org.junit.Assert;
@@ -51,6 +48,14 @@ public class TransactionEntityFacadeTest {
     }
     
     @Test
+    public void findFailTest() {
+        storageFacade.emptyStorage();
+        long id = transactionEntityFacade.create("DEBIT", 4000, "OK");
+        
+        Assert.assertTrue(transactionEntityFacade.find(2) == null);
+    }
+    
+    @Test
     public void findAllTest() {
         storageFacade.emptyStorage();
         
@@ -75,11 +80,31 @@ public class TransactionEntityFacadeTest {
     }
     
     @Test
+    public void updateFailTest() {
+        storageFacade.emptyStorage();
+        long id = transactionEntityFacade.create("DEBIT", 5000, "OK");
+        transactionEntityFacade.update(id + 1, "CREDIT", 5000, "OK");
+        Transaction transaction = transactionEntityFacade.find(id);
+        
+        Assert.assertTrue(transaction.getType().equals("DEBIT"));
+    }
+    
+    @Test
     public void removeTest() {
         long id = transactionEntityFacade.create("CREDIT", 2000, "OK");
         
         transactionEntityFacade.remove(id);
         
         Assert.assertTrue(transactionEntityFacade.find(id) == null);
+    }
+    
+    @Test
+    public void removeFailTest() {
+        storageFacade.emptyStorage();
+        long id = transactionEntityFacade.create("CREDIT", 2000, "OK");
+        
+        transactionEntityFacade.remove(id + 1);
+        
+        Assert.assertFalse(transactionEntityFacade.find(id) == null);
     }
 }

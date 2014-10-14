@@ -53,13 +53,27 @@ public class AccountLogicFacadeTest {
                             account.getAccountType().equals(accType));        
     }
     
-        @Test
+    @Test
     public void testCreateFail() throws Exception {
         String accType = "Savings";
         String name = "Lisa Lis";
         String bank = "SWEDBANK";
         
-        accountLogicFacade.create(accType,name, bank);
+        try {
+            accountLogicFacade.create(accType,name, bank);
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue(true);
+        }
+        
+        accType = "Ssdm";
+        name = "Lisa Lisasson";
+        bank = "SWEDBANK";
+        
+        try {
+            accountLogicFacade.create(accType,name, bank);
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue(true);
+        }
              
     }
     
@@ -74,6 +88,19 @@ public class AccountLogicFacadeTest {
         Assert.assertFalse(results.isEmpty());
         Assert.assertTrue(results.get(0).getId() == account.getId());
     
+    }
+    
+        @Test
+    public void testFindFail() throws Exception {
+        String accType = "CHECK";
+        String name = "Lisa Lisasson";
+        String bank = "SWEDBANK";
+        accountLogicFacade.create(accType,name, bank);
+        try {
+            List<Account> results = accountLogicFacade.find("Lisa");    
+        } catch (IllegalArgumentException e) {
+            Assert.assertTrue(true);
+        }
     }
     
     @Test
@@ -111,18 +138,18 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testTransactions() throws Exception {
+        storageFacade.emptyStorage();
+        
         String accType = "CHECK";
         String name = "Lisa Lisasson";
         String bank = "SWEDBANK";
-            accountLogicFacade.create(accType,name, bank);
+        accountLogicFacade.create(accType, name, bank);
 
         accountLogicFacade.credit(1, 10);
         accountLogicFacade.debit(1, 5);
-        Account account = accountEntityFacade.find(1);
-        List<Transaction> transactions = account.getTransactions();
+        List<Transaction> transactions = accountLogicFacade.transactions(1);
         
-        Assert.assertTrue(transactions != null);
-        
+        Assert.assertTrue(transactions.size() == 2);
     }
     
 }
