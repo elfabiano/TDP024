@@ -171,7 +171,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void addTransaction(long accountId, long transactionId) {
+    public void addTransaction(long accountId, long transactionId) throws Exception {
         EntityManager em = EMF.getEntityManager();
         try {
             em.getTransaction().begin();
@@ -179,13 +179,13 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Account account = em.find(AccountDB.class, accountId);
             
             Transaction transaction = em.find(TransactionDB.class, transactionId);
-            
             transaction.setAccount(account);
             em.merge(transaction);
             
             em.getTransaction().commit();
         }
         catch(Exception e){
+            System.out.println("DETTA ÄR ETT FEL SOM KASTAS!!!!");
             accountLogger.log(e);
         } finally {
             if(em.getTransaction().isActive()) {

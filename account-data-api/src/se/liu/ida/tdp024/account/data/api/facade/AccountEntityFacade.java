@@ -14,7 +14,7 @@ public interface AccountEntityFacade {
     
     public List<Account> findAll(String personKey);
     
-    public void addTransaction(long accountId, long transactionId);
+    public void addTransaction(long accountId, long transactionId) throws Exception;
 
     public void remove(long id) throws Exception;
     

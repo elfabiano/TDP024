@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="c-207-134.eduroam.liu.se" name="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" skipped="0" tests="7" time="9.335" timestamp="2014-10-14T10:14:30">
+<testsuite errors="0" failures="0" hostname="c-206-193.eduroam.liu.se" name="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" skipped="0" tests="7" time="13.135" timestamp="2014-10-14T12:56:29">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -48,7 +48,7 @@
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
     <property name="sun.io.unicode.encoding" value="UnicodeBig" />
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
-    <property name="_jacoco.agentFile" value="/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent409774461146834068.jar" />
+    <property name="_jacoco.agentFile" value="/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent5629044942311990173.jar" />
     <property name="sonar.tests" value="    account-data-test/test,    account-logic-test/test,    account-rest/test    " />
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
@@ -62,8 +62,8 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/jacoco/test/TEST-se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest.xml crashfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junitvmwatcher8085282715213738079.properties propsfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junit3780447579083094725.properties" />
-    <property name="java.class.path" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-impl/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/web/WEB-INF/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-util/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/ant-contrib-1.0b3.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/derby.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/eclipselink-2.3.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-annotations-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-core-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-databind-2.2.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoagent.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoant.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/javax.persistence-2.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/activation.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jaxb-api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jsr173_api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/asm-3.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-core-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-jaxrs-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-mapper-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-xc-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-apache-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-atom-abdera-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-core-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-guice-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-json-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-multipart-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-simple-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-spring-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jettison-1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jsr311-api-1.1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/junit-4.10.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/sonar-ant-task-2.1.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar:/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent409774461146834068.jar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/jacoco/test/TEST-se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest.xml crashfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junitvmwatcher804353017341028844.properties propsfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junit5737179479919646265.properties" />
+    <property name="java.class.path" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-impl/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/web/WEB-INF/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-util/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/ant-contrib-1.0b3.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/derby.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/eclipselink-2.3.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-annotations-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-core-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-databind-2.2.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoagent.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoant.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/javax.persistence-2.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/activation.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jaxb-api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jsr173_api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/asm-3.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-core-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-jaxrs-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-mapper-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-xc-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-apache-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-atom-abdera-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-core-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-guice-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-json-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-multipart-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-simple-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-spring-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jettison-1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jsr311-api-1.1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/junit-4.10.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/sonar-ant-task-2.1.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar:/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent5629044942311990173.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
@@ -89,76 +89,76 @@
     <property name="ant.project.invoked-targets" value="jacoco" />
     <property name="sonar.projectKey" value="TDP024_group_a8" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCreate" time="5.281" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCreateFail" time="0.352" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testFind" time="0.969" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCreate" time="9.106" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCreateFail" time="0.365" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testFind" time="0.998" />
   <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testFindFail" time="0.694" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCredit" time="0.785" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testDebit" time="0.58" />
-  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testTransactions" time="0.566" />
-  <system-out><![CDATA[[EL Info]: 2014-10-14 12:14:33.049--ServerSession(1092337390)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:34.563--ServerSession(1092337390)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:34.878--ServerSession(1092337390)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testCredit" time="0.67" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testDebit" time="0.622" />
+  <testcase classname="se.liu.ida.tdp024.account.logic.test.facade.AccountLogicFacadeTest" name="testTransactions" time="0.575" />
+  <system-out><![CDATA[[EL Info]: 2014-10-14 14:56:34.817--ServerSession(1542011220)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:37.642--ServerSession(1542011220)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:38.002--ServerSession(1542011220)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'ALTER TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID
 Query: DataModifyQuery(sql="ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID")
-[EL Warning]: 2014-10-14 12:14:34.883--ServerSession(1092337390)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-14 14:56:38.008--ServerSession(1542011220)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'ACCOUNTDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE ACCOUNTDB
 Query: DataModifyQuery(sql="DROP TABLE ACCOUNTDB")
-[EL Warning]: 2014-10-14 12:14:34.952--ServerSession(1092337390)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-14 14:56:38.084--ServerSession(1542011220)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE TRANSACTIONDB
 Query: DataModifyQuery(sql="DROP TABLE TRANSACTIONDB")
-[EL Info]: 2014-10-14 12:14:35.438--ServerSession(1092337390)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:14:36.167--ServerSession(629893349)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:36.174--ServerSession(629893349)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:36.407--ServerSession(629893349)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 14:56:38.623--ServerSession(1542011220)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:39.369--ServerSession(77495791)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:39.374--ServerSession(77495791)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:39.579--ServerSession(77495791)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-14 12:14:36.763--ServerSession(629893349)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:14:37.138--ServerSession(1482290715)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:37.145--ServerSession(1482290715)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:37.271--ServerSession(1482290715)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 14:56:39.988--ServerSession(77495791)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:40.364--ServerSession(224373460)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:40.371--ServerSession(224373460)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:40.494--ServerSession(224373460)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-14 12:14:37.457--ServerSession(1482290715)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:14:38.02--ServerSession(804111357)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:38.025--ServerSession(804111357)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:38.118--ServerSession(804111357)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
-Error Code: 30000
-Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
-Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-updateAmount, change: 10
-[EL Info]: 2014-10-14 12:14:38.242--ServerSession(804111357)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:14:38.611--ServerSession(42261163)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:38.617--ServerSession(42261163)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:38.715--ServerSession(42261163)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 14:56:40.682--ServerSession(224373460)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:41.059--ServerSession(584986528)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:41.064--ServerSession(584986528)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:41.162--ServerSession(584986528)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
 updateAmount, change: 10
-updateAmount, change: -5
-[EL Info]: 2014-10-14 12:14:38.823--ServerSession(42261163)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:14:39.193--ServerSession(106712796)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:14:39.198--ServerSession(106712796)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:14:39.287--ServerSession(106712796)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 14:56:41.353--ServerSession(584986528)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:41.761--ServerSession(2017359229)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:41.768--ServerSession(2017359229)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:41.869--ServerSession(2017359229)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
 updateAmount, change: 10
 updateAmount, change: -5
-[EL Info]: 2014-10-14 12:14:39.389--ServerSession(106712796)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:41.975--ServerSession(2017359229)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 14:56:42.347--ServerSession(91840744)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 14:56:42.353--ServerSession(91840744)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 14:56:42.45--ServerSession(91840744)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
+Error Code: 30000
+Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
+Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
+updateAmount, change: 10
+updateAmount, change: -5
+[EL Info]: 2014-10-14 14:56:42.55--ServerSession(91840744)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

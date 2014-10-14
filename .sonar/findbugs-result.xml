@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.1" sequence="0" timestamp="1413281638000" analysisTimestamp="1413281713630" release="">
+<BugCollection version="2.0.1" sequence="0" timestamp="1413291237000" analysisTimestamp="1413291439635" release="">
   <Project>
     <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes</Jar>
     <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes</Jar>
@@ -44,8 +44,8 @@
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs4175170117824600991.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs3736984413528528063.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs91465918862352647.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs1360699107570715422.jar</AuxClasspathEntry>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/src</SrcDir>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/src</SrcDir>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/src</SrcDir>
@@ -56,13 +56,13 @@
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
     <LongMessage>se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB.getCreated() may expose internal representation by returning TransactionDB.created</LongMessage>
     <Class classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true">
-      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="28" end="144" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
-        <Message>At TransactionDB.java:[lines 28-144]</Message>
+      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="28" end="136" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
+        <Message>At TransactionDB.java:[lines 28-136]</Message>
       </SourceLine>
       <Message>In class se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB</Message>
     </Class>
     <Method classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" name="getCreated" signature="()Ljava/util/Date;" isStatic="false" primary="true">
-      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="97" end="97" startBytecode="0" endBytecode="46" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java"/>
+      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="89" end="89" startBytecode="0" endBytecode="46" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java"/>
       <Message>In method se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB.getCreated()</Message>
     </Method>
     <Field classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" name="created" signature="Ljava/util/Date;" isStatic="false" primary="true">
@@ -71,21 +71,21 @@
       </SourceLine>
       <Message>Field se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB.created</Message>
     </Field>
-    <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true" start="97" end="97" startBytecode="4" endBytecode="4" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
-      <Message>At TransactionDB.java:[line 97]</Message>
+    <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true" start="89" end="89" startBytecode="4" endBytecode="4" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
+      <Message>At TransactionDB.java:[line 89]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="8f0ee110a9a321ca59522bd33f135790" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
     <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
     <LongMessage>se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB.setCreated(Date) may expose internal representation by storing an externally mutable object into TransactionDB.created</LongMessage>
     <Class classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true">
-      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="28" end="144" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
-        <Message>At TransactionDB.java:[lines 28-144]</Message>
+      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="28" end="136" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
+        <Message>At TransactionDB.java:[lines 28-136]</Message>
       </SourceLine>
       <Message>In class se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB</Message>
     </Class>
     <Method classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" name="setCreated" signature="(Ljava/util/Date;)V" isStatic="false" primary="true">
-      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="105" end="106" startBytecode="0" endBytecode="61" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java"/>
+      <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" start="97" end="98" startBytecode="0" endBytecode="61" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java"/>
       <Message>In method se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB.setCreated(Date)</Message>
     </Method>
     <Field classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" name="created" signature="Ljava/util/Date;" isStatic="false" primary="true">
@@ -97,8 +97,8 @@
     <LocalVariable name="created" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
       <Message>Local variable named created</Message>
     </LocalVariable>
-    <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true" start="105" end="105" startBytecode="2" endBytecode="2" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
-      <Message>At TransactionDB.java:[line 105]</Message>
+    <SourceLine classname="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" primary="true" start="97" end="97" startBytecode="2" endBytecode="2" sourcefile="TransactionDB.java" sourcepath="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java">
+      <Message>At TransactionDB.java:[line 97]</Message>
     </SourceLine>
   </BugInstance>
   <BugInstance type="URF_UNREAD_FIELD" priority="2" abbrev="UrF" category="PERFORMANCE" instanceHash="7302963e4fa8d4819d834f428d1f1cde" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
@@ -258,15 +258,15 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <Description>Method returning array may expose internal representation</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 14 Oct 2014 12:13:58 +0200" total_classes="27" referenced_classes="141" total_bugs="5" total_size="640" num_packages="13" vm_version="23.25-b01" cpu_seconds="24.15" clock_seconds="8.68" peak_mbytes="206.07" alloc_mbytes="291.94" gc_seconds="0.35" priority_2="4" priority_1="1">
-    <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Account.java" bugCount="0" size="13"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Transaction.java" bugCount="0" size="13"/>
+  <FindBugsSummary timestamp="Tue, 14 Oct 2014 14:53:57 +0200" total_classes="27" referenced_classes="141" total_bugs="5" total_size="634" num_packages="13" vm_version="23.25-b01" cpu_seconds="25.21" clock_seconds="10.97" peak_mbytes="206.98" alloc_mbytes="288.12" gc_seconds="0.38" priority_2="4" priority_1="1">
+    <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Account.java" bugCount="0" size="12"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Transaction.java" bugCount="0" size="12"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/facade/AccountEntityFacade.java" bugCount="0" size="8"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/facade/TransactionEntityFacade.java" bugCount="0" size="6"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/util/StorageFacade.java" bugCount="0" size="2"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/AccountDB.java" bugCount="0" size="40"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java" bugCount="2" size="42" bugHash="96aba9a8e09e20c8ef321218551e07c5"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="120"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/AccountDB.java" bugCount="0" size="37"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java" bugCount="2" size="39" bugHash="d666843195ab1b9abb80866714eff4e7"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="122"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/TransactionEntityFacadeDB.java" bugCount="0" size="69"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/Constants.java" bugCount="0" size="9"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/EMF.java" bugCount="0" size="14"/>
@@ -285,9 +285,9 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <FileStats path="se/liu/ida/tdp024/account/util/logger/AccountLogger.java" bugCount="0" size="26"/>
     <FileStats path="se/liu/ida/tdp024/account/util/logger/AccountLoggerImpl.java" bugCount="0" size="13"/>
     <FileStats path="se/liu/ida/tdp024/account/util/logger/AccountLoggerMonlog.java" bugCount="0" size="17"/>
-    <PackageStats package="se.liu.ida.tdp024.account.data.api.entity" total_bugs="0" total_types="2" total_size="26">
-      <ClassStats class="se.liu.ida.tdp024.account.data.api.entity.Account" sourceFile="Account.java" interface="true" size="13" bugs="0"/>
-      <ClassStats class="se.liu.ida.tdp024.account.data.api.entity.Transaction" sourceFile="Transaction.java" interface="true" size="13" bugs="0"/>
+    <PackageStats package="se.liu.ida.tdp024.account.data.api.entity" total_bugs="0" total_types="2" total_size="24">
+      <ClassStats class="se.liu.ida.tdp024.account.data.api.entity.Account" sourceFile="Account.java" interface="true" size="12" bugs="0"/>
+      <ClassStats class="se.liu.ida.tdp024.account.data.api.entity.Transaction" sourceFile="Transaction.java" interface="true" size="12" bugs="0"/>
     </PackageStats>
     <PackageStats package="se.liu.ida.tdp024.account.data.api.facade" total_bugs="0" total_types="2" total_size="14">
       <ClassStats class="se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade" sourceFile="AccountEntityFacade.java" interface="true" size="8" bugs="0"/>
@@ -296,12 +296,12 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <PackageStats package="se.liu.ida.tdp024.account.data.api.util" total_bugs="0" total_types="1" total_size="2">
       <ClassStats class="se.liu.ida.tdp024.account.data.api.util.StorageFacade" sourceFile="StorageFacade.java" interface="true" size="2" bugs="0"/>
     </PackageStats>
-    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.entity" total_bugs="2" total_types="2" total_size="82" priority_2="2">
-      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB" sourceFile="AccountDB.java" interface="false" size="40" bugs="0"/>
-      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" sourceFile="TransactionDB.java" interface="false" size="42" bugs="2" priority_2="2"/>
+    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.entity" total_bugs="2" total_types="2" total_size="76" priority_2="2">
+      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB" sourceFile="AccountDB.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" sourceFile="TransactionDB.java" interface="false" size="39" bugs="2" priority_2="2"/>
     </PackageStats>
-    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="189">
-      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="120" bugs="0"/>
+    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="191">
+      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="122" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB" sourceFile="TransactionEntityFacadeDB.java" interface="false" size="69" bugs="0"/>
     </PackageStats>
     <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.util" total_bugs="0" total_types="3" total_size="29">
@@ -339,24 +339,20 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.util.logger.AccountLoggerMonlog" sourceFile="AccountLoggerMonlog.java" interface="false" size="17" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="830" invocations="844" avgMicrosecondsPerInvocation="984" maxMicrosecondsPerInvocation="27921" standardDeviationMircosecondsPerInvocation="1980"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="819" invocations="850" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="23175" standardDeviationMircosecondsPerInvocation="912"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="551" invocations="141" avgMicrosecondsPerInvocation="3910" maxMicrosecondsPerInvocation="50076" standardDeviationMircosecondsPerInvocation="8610"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="444" invocations="141" avgMicrosecondsPerInvocation="3149" maxMicrosecondsPerInvocation="38991" standardDeviationMircosecondsPerInvocation="6766"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="273" invocations="141" avgMicrosecondsPerInvocation="1937" maxMicrosecondsPerInvocation="33074" standardDeviationMircosecondsPerInvocation="4152"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="241" invocations="99" avgMicrosecondsPerInvocation="2438" maxMicrosecondsPerInvocation="32142" standardDeviationMircosecondsPerInvocation="5641"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="238" invocations="93" avgMicrosecondsPerInvocation="2559" maxMicrosecondsPerInvocation="45262" standardDeviationMircosecondsPerInvocation="6806"/>
-      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="227" invocations="93" avgMicrosecondsPerInvocation="2450" maxMicrosecondsPerInvocation="37199" standardDeviationMircosecondsPerInvocation="4841"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="224" invocations="102" avgMicrosecondsPerInvocation="2201" maxMicrosecondsPerInvocation="40972" standardDeviationMircosecondsPerInvocation="5920"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="210" invocations="392" avgMicrosecondsPerInvocation="537" maxMicrosecondsPerInvocation="17500" standardDeviationMircosecondsPerInvocation="1021"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="186" invocations="141" avgMicrosecondsPerInvocation="1319" maxMicrosecondsPerInvocation="35433" standardDeviationMircosecondsPerInvocation="3707"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="162" invocations="93" avgMicrosecondsPerInvocation="1745" maxMicrosecondsPerInvocation="24527" standardDeviationMircosecondsPerInvocation="3635"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="142" invocations="186" avgMicrosecondsPerInvocation="766" maxMicrosecondsPerInvocation="76205" standardDeviationMircosecondsPerInvocation="5574"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="141" invocations="830" avgMicrosecondsPerInvocation="170" maxMicrosecondsPerInvocation="32867" standardDeviationMircosecondsPerInvocation="1169"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="126" invocations="141" avgMicrosecondsPerInvocation="896" maxMicrosecondsPerInvocation="14624" standardDeviationMircosecondsPerInvocation="2000"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="120" invocations="68" avgMicrosecondsPerInvocation="1770" maxMicrosecondsPerInvocation="26116" standardDeviationMircosecondsPerInvocation="3906"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="115" invocations="141" avgMicrosecondsPerInvocation="820" maxMicrosecondsPerInvocation="15994" standardDeviationMircosecondsPerInvocation="1922"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="114" invocations="93" avgMicrosecondsPerInvocation="1230" maxMicrosecondsPerInvocation="20220" standardDeviationMircosecondsPerInvocation="2647"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="2634" invocations="850" avgMicrosecondsPerInvocation="3099" maxMicrosecondsPerInvocation="55333" standardDeviationMircosecondsPerInvocation="5713"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="863" invocations="844" avgMicrosecondsPerInvocation="1023" maxMicrosecondsPerInvocation="83510" standardDeviationMircosecondsPerInvocation="3816"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="520" invocations="141" avgMicrosecondsPerInvocation="3693" maxMicrosecondsPerInvocation="60639" standardDeviationMircosecondsPerInvocation="8656"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="433" invocations="141" avgMicrosecondsPerInvocation="3074" maxMicrosecondsPerInvocation="39186" standardDeviationMircosecondsPerInvocation="6856"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="285" invocations="141" avgMicrosecondsPerInvocation="2025" maxMicrosecondsPerInvocation="29824" standardDeviationMircosecondsPerInvocation="4436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="250" invocations="97" avgMicrosecondsPerInvocation="2581" maxMicrosecondsPerInvocation="50249" standardDeviationMircosecondsPerInvocation="6634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="220" invocations="100" avgMicrosecondsPerInvocation="2208" maxMicrosecondsPerInvocation="44224" standardDeviationMircosecondsPerInvocation="5778"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="218" invocations="390" avgMicrosecondsPerInvocation="561" maxMicrosecondsPerInvocation="17661" standardDeviationMircosecondsPerInvocation="1088"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="204" invocations="91" avgMicrosecondsPerInvocation="2245" maxMicrosecondsPerInvocation="13961" standardDeviationMircosecondsPerInvocation="3220"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="200" invocations="91" avgMicrosecondsPerInvocation="2203" maxMicrosecondsPerInvocation="42420" standardDeviationMircosecondsPerInvocation="5321"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="163" invocations="91" avgMicrosecondsPerInvocation="1794" maxMicrosecondsPerInvocation="18547" standardDeviationMircosecondsPerInvocation="3104"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="135" invocations="141" avgMicrosecondsPerInvocation="963" maxMicrosecondsPerInvocation="19335" standardDeviationMircosecondsPerInvocation="2476"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="134" invocations="830" avgMicrosecondsPerInvocation="162" maxMicrosecondsPerInvocation="3914" standardDeviationMircosecondsPerInvocation="350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="129" invocations="186" avgMicrosecondsPerInvocation="697" maxMicrosecondsPerInvocation="49816" standardDeviationMircosecondsPerInvocation="3883"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

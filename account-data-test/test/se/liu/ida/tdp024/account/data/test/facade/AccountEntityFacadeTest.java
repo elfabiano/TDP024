@@ -8,14 +8,18 @@ import org.junit.Assert;
 import org.junit.Test;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
+import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
 import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
+import se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.Constants;
 import se.liu.ida.tdp024.account.data.impl.db.util.StorageFacadeDB;
 
 public class AccountEntityFacadeTest {
     
     //---- Unit under test ----//
     private AccountEntityFacade accountEntityFacade = new AccountEntityFacadeDB();
+    private TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     private StorageFacade storageFacade = new StorageFacadeDB();;
     
     @After
@@ -120,6 +124,32 @@ public class AccountEntityFacadeTest {
         } catch (Exception e) {
             Assert.assertTrue(true);
         }
+    }
+    
+    @Test
+    public void addTransactionTest(){
+        {
+            long Aid = accountEntityFacade.create("CHECK", "blablablabla", "asfaagsagsadgdag");
+            long Tid = transactionEntityFacade.create(Constants.TRANSACTION_TYPE_CREDIT, 1000, Constants.TRANSACTION_STATUS_OK);
+            Assert.assertNotNull(accountEntityFacade.find(Aid));
+            Assert.assertNotNull(transactionEntityFacade.find(Tid));
+            
+            try {accountEntityFacade.addTransaction(Aid, Tid);
+                Assert.assertEquals(Aid, transactionEntityFacade.find(Tid).getAccount().getId());}
+            catch (Exception ex){
+                //Should not reach this
+                Assert.assertTrue(false);
+            }
+            
+            try {
+                accountEntityFacade.addTransaction(Aid, (Tid + 1));
+                //Should not reach this
+                //Assert.assertTrue(false);
+            } catch (Exception ex) {
+                Assert.assertTrue(true);
+            }
+        }
+        
     }
     
     @Test
