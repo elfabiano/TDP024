@@ -39,14 +39,6 @@ public class AccountDB implements Account {
     }
 
     /**
-     * @param id the id to set
-     */
-    @Override
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    /**
      * @return the personKey
      */
     @Override

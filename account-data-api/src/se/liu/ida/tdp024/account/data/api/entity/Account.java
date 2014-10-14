@@ -57,11 +57,6 @@ public interface Account extends Serializable {
     void setHoldings(int holdings);
 
     /**
-     * @param id the id to set
-     */
-    void setId(long id);
-
-    /**
      * @param personKey the personKey to set
      */
     void setPersonKey(String personKey);

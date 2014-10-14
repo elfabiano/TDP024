@@ -107,8 +107,8 @@ public class AccountServiceTest {
             Assert.assertEquals("OK", response.getEntity());
             
             //Must test if an account does not exist.
-            //response = accS1.debit(2, 400);
-            //Assert.assertEquals("FAILED", response.getEntity());
+            response = accS1.debit(2, 400);
+            Assert.assertEquals("FAILED", response.getEntity());
         }
         
     }

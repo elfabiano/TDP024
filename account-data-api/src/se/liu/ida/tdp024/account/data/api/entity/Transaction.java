@@ -55,11 +55,6 @@ public interface Transaction extends Serializable {
     void setAmount(int amount);
 
     /**
-     * @param id the id to set
-     */
-    void setId(long id);
-
-    /**
      * @param status the status to set
      */
     void setStatus(String status);

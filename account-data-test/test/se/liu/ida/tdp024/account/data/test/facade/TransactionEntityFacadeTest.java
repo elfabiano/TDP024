@@ -38,6 +38,7 @@ public class TransactionEntityFacadeTest {
         id = transactionEntityFacade.create(type, amount, status);
 
         Assert.assertFalse(-1 == id);
+        
     }
     
     @Test

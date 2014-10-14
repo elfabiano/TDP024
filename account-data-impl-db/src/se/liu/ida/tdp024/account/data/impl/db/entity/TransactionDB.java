@@ -50,14 +50,6 @@ public class TransactionDB implements Transaction {
     }
 
     /**
-     * @param id the id to set
-     */
-    @Override
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    /**
      * @return the type
      */
     @Override

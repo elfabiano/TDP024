@@ -7,7 +7,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Account;
 public interface AccountEntityFacade {
     public long create(String accountType, String personKey, String bankKey);
     
-    public void updateAmount(long id, int newAmount) throws OptimisticLockException;
+    public void updateAmount(long id, int change) throws Exception;
     
     public Account find(long id);
     
