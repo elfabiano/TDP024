@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="c-207-134.eduroam.liu.se" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="5" time="5.406" timestamp="2014-10-14T10:02:00">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="8" time="6.397" timestamp="2014-10-14T10:27:55">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="sonar.projectName" value="TDP024_group_a8" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
-    <property name="os.name" value="Mac OS X" />
-    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/classes" />
-    <property name="ant.file.TDP024_group_a8" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/sonar_group_a8.xml" />
+    <property name="os.name" value="Windows 8" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_25\jre\classes" />
+    <property name="user.country.format" value="SE" />
+    <property name="ant.file.TDP024_group_a8" value="C:\Users\Fabian\Development\TDP024\sonar_group_a8.xml" />
+    <property name="sun.desktop" value="windows" />
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
-    <property name="ant.home" value="/usr/local/Cellar/ant/1.9.4/libexec" />
+    <property name="ant.home" value="C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\bin\.." />
     <property name="sonar.projectVersion" value="1.0" />
-    <property name="java.runtime.version" value="1.7.0_25-b15" />
+    <property name="java.runtime.version" value="1.7.0_25-b16" />
     <property name="sonar.jdbc.password" value="sonar_17f4" />
-    <property name="user.name" value="filipschollin" />
-    <property name="user.language" value="sv" />
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib" />
+    <property name="user.name" value="Fabian" />
+    <property name="user.language.format" value="sv" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin" />
     <property name="ant.project.default-target" value="default" />
     <property name="ant.project.name" value="TDP024_group_a8" />
     <property name="java.version" value="1.7.0_25" />
@@ -23,130 +26,233 @@
     <property name="sun.arch.data.model" value="64" />
     <property name="jacoco.report.dir" value="jacoco/report" />
     <property name="sonar.host.url" value="http://www.ida.liu.se/~TDP024/sonar" />
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
-    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\endorsed" />
     <property name="sonar.jdbc.username" value="tdp024_sonar" />
-    <property name="sun.cpu.isalist" value="" />
-    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="file.encoding.pkg" value="sun.io" />
-    <property name="file.separator" value="/" />
+    <property name="file.separator" value="\" />
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="sonar.sources" value="   account-data-api/src,   account-data-impl-db/src,   account-logic-api/src,   account-logic-impl/src,   account-rest/src/java   " />
     <property name="java.class.version" value="51.0" />
-    <property name="user.country" value="SE" />
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre" />
+    <property name="user.country" value="GB" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_25\jre" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="sonar.libraries" value="lib/*.jar,lib/jaxb/*.jar,lib/jersey/*.jar" />
-    <property name="ant.file" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/sonar_group_a8.xml" />
-    <property name="os.version" value="10.9.4" />
+    <property name="ant.file" value="C:\Users\Fabian\Development\TDP024\sonar_group_a8.xml" />
+    <property name="os.version" value="6.2" />
     <property name="ant.file.type.TDP024_group_a8" value="file" />
     <property name="jacoco.test.dir" value="jacoco/test" />
-    <property name="path.separator" value=":" />
+    <property name="path.separator" value=";" />
     <property name="java.vm.version" value="23.25-b01" />
-    <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.9.4/libexec/lib" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib" />
     <property name="sonar.login" value="grupp-a8" />
-    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
-    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
-    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
-    <property name="_jacoco.agentFile" value="/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent7655178731758288936.jar" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="_jacoco.agentFile" value="C:\Users\Fabian\AppData\Local\Temp\jacocoagent3889129873765035072.jar" />
     <property name="sonar.tests" value="    account-data-test/test,    account-logic-test/test,    account-rest/test    " />
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="user.script" value="" />
     <property name="jacoco.exec.file" value="jacoco/jacoco.exec" />
-    <property name="user.home" value="/Users/filipschollin" />
+    <property name="user.home" value="C:\Users\Fabian" />
     <property name="sonar.binaries" value="   account-data-api/build/classes,   account-data-impl-db/build/classes,   account-logic-api/build/classes,   account-logic-impl/build/classes,   account-rest/build/web/WEB-INF/classes,   account-util/build/classes   " />
     <property name="sonar.language" value="java" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
-    <property name="java.library.path" value="/Users/filipschollin/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\MinGW\local\bin;C:\Program Files\Java\jdk1.7.0_25\bin;C:\Program Files (x86)\OpenSSH\bin;C:\Program Files\Apache\apache-maven-3.1.1\bin;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140321\sdk\tools;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140321\sdk\platform-tools;." />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
-    <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/jacoco/test/TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junitvmwatcher5298390196538864045.properties propsfile=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/junit2878861121043089937.properties" />
-    <property name="java.class.path" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-impl/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/web/WEB-INF/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-util/build/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-test/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/test/classes:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/ant-contrib-1.0b3.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/derby.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/eclipselink-2.3.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-annotations-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-core-2.2.2.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-databind-2.2.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoagent.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoant.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/javax.persistence-2.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/activation.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jaxb-api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jsr173_api.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/asm-3.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-core-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-jaxrs-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-mapper-asl-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-xc-1.7.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-apache-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-atom-abdera-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-core-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-guice-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-json-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-multipart-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-simple-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-spring-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jettison-1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jsr311-api-1.1.1.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/junit-4.10.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/sonar-ant-task-2.1.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.9.4/libexec/lib/ant-junit4.jar:/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/jacocoagent7655178731758288936.jar" />
-    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\jacoco\test\TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=C:\Users\Fabian\Development\TDP024\junitvmwatcher2042809529720255140.properties propsfile=C:\Users\Fabian\Development\TDP024\junit6722318906371895459.properties" />
+    <property name="java.class.path" value="C:\Users\Fabian\Development\TDP024\account-data-api\build\classes;C:\Users\Fabian\Development\TDP024\account-data-impl-db\build\classes;C:\Users\Fabian\Development\TDP024\account-logic-api\build\classes;C:\Users\Fabian\Development\TDP024\account-logic-impl\build\classes;C:\Users\Fabian\Development\TDP024\account-rest\build\web\WEB-INF\classes;C:\Users\Fabian\Development\TDP024\account-util\build\classes;C:\Users\Fabian\Development\TDP024\account-data-test\build\test\classes;C:\Users\Fabian\Development\TDP024\account-logic-test\build\test\classes;C:\Users\Fabian\Development\TDP024\account-rest\build\test\classes;C:\Users\Fabian\Development\TDP024\lib\ant-contrib-1.0b3.jar;C:\Users\Fabian\Development\TDP024\lib\derby.jar;C:\Users\Fabian\Development\TDP024\lib\eclipselink-2.3.0.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-annotations-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-core-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-databind-2.2.1.jar;C:\Users\Fabian\Development\TDP024\lib\jacocoagent.jar;C:\Users\Fabian\Development\TDP024\lib\jacocoant.jar;C:\Users\Fabian\Development\TDP024\lib\javax.persistence-2.0.jar;C:\Users\Fabian\Development\TDP024\lib\jaxb\activation.jar;C:\Users\Fabian\Development\TDP024\lib\jaxb\jaxb-api.jar;C:\Users\Fabian\Development\TDP024\lib\jaxb\jsr173_api.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\asm-3.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-core-asl-1.7.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-jaxrs-1.7.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-mapper-asl-1.7.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-xc-1.7.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-apache-client-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-atom-abdera-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-client-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-core-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-guice-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-json-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-multipart-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-server-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-simple-server-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-spring-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jettison-1.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\jsr311-api-1.1.1.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-client-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-server-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-signature-1.8.jar;C:\Users\Fabian\Development\TDP024\lib\junit-4.10.jar;C:\Users\Fabian\Development\TDP024\lib\org-netbeans-modules-java-j2seproject-copylibstask.jar;C:\Users\Fabian\Development\TDP024\lib\org.eclipse.persistence.jpa.jpql_1.0.0.jar;C:\Users\Fabian\Development\TDP024\lib\sonar-ant-task-2.1.jar;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-launcher.jar;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant.jar;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-junit.jar;C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant-junit4.jar;C:\Users\Fabian\AppData\Local\Temp\jacocoagent3889129873765035072.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.2 compiled on July 8 2013" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
     <property name="java.vm.specification.version" value="1.7" />
     <property name="sun.cpu.endian" value="little" />
-    <property name="sun.os.patch.level" value="unknown" />
-    <property name="java.io.tmpdir" value="/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="java.io.tmpdir" value="C:\Users\Fabian\AppData\Local\Temp\" />
     <property name="sonar.jdbc.url" value="jdbc:mysql://db.ida.liu.se:3306/tdp024_sonar?useUnicode=true&amp;characterEncoding=utf8" />
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
-    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
-    <property name="os.arch" value="x86_64" />
-    <property name="java.ext.dirs" value="/Users/filipschollin/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
-    <property name="user.dir" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Users\Fabian\Development\TDP024" />
     <property name="libs.CopyLibs.classpath" value="/home/TDP024/netbeans-8.0.1/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="sonar.password" value="fru8Ud4A" />
-    <property name="line.separator" value="&#xa;" />
+    <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="basedir" value="/Users/filipschollin/Documents/Linkoping/TDP024/TDP024" />
+    <property name="basedir" value="C:\Users\Fabian\Development\TDP024" />
     <property name="ant.java.version" value="1.7" />
-    <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.9.4/libexec/lib/ant.jar" />
-    <property name="file.encoding" value="UTF-8" />
+    <property name="ant.core.lib" value="C:\Users\Fabian\Development\adt-bundle-windows-x86_64-20140624\eclipse\plugins\org.apache.ant_1.9.2.v201404171502\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
     <property name="java.specification.version" value="1.7" />
     <property name="ant.project.invoked-targets" value="jacoco" />
     <property name="sonar.projectKey" value="TDP024_group_a8" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="4.289" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findTest" time="0.314" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findAllTest" time="0.233" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findAllTestKey" time="0.153" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="updateAmount" time="0.265" />
-  <system-out><![CDATA[[EL Info]: 2014-10-14 12:02:02.908--ServerSession(1837057080)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:02:04.476--ServerSession(1837057080)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:02:04.814--ServerSession(1837057080)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="4.592" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="removeTest" time="0.283" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findTest" time="0.192" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findFailTest" time="0.174" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findAllTest" time="0.242" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findAllTestKeyFail" time="0.173" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="updateAmountTest" time="0.351" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="findAllTestKey" time="0.25" />
+  <system-out><![CDATA[[EL Info]: 2014-10-14 12:27:57.33--ServerSession(12217579)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:27:58.982--ServerSession(12217579)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:27:59.345--ServerSession(12217579)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'ALTER TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID
 Query: DataModifyQuery(sql="ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID")
-[EL Warning]: 2014-10-14 12:02:04.82--ServerSession(1837057080)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-14 12:27:59.352--ServerSession(12217579)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'ACCOUNTDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE ACCOUNTDB
 Query: DataModifyQuery(sql="DROP TABLE ACCOUNTDB")
-[EL Warning]: 2014-10-14 12:02:04.891--ServerSession(1837057080)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2014-10-14 12:27:59.435--ServerSession(12217579)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE TRANSACTIONDB
 Query: DataModifyQuery(sql="DROP TABLE TRANSACTIONDB")
 1
-[EL Info]: 2014-10-14 12:02:05.336--ServerSession(1837057080)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:02:05.364--ServerSession(1486622599)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:02:05.37--ServerSession(1486622599)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:02:05.546--ServerSession(1486622599)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 12:27:59.911--ServerSession(12217579)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:27:59.953--ServerSession(1881337823)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:27:59.958--ServerSession(1881337823)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:00.112--ServerSession(1881337823)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-14 12:02:05.653--ServerSession(1486622599)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:02:05.676--ServerSession(317118634)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:02:05.681--ServerSession(317118634)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:02:05.797--ServerSession(317118634)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 12:28:00.198--ServerSession(1881337823)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:00.235--ServerSession(1648518402)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:00.24--ServerSession(1648518402)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:00.361--ServerSession(1648518402)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-14 12:02:05.887--ServerSession(317118634)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:02:05.902--ServerSession(323450695)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:02:05.907--ServerSession(323450695)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:02:06.004--ServerSession(323450695)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 12:28:00.391--ServerSession(1648518402)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:00.424--ServerSession(1742166011)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:00.428--ServerSession(1742166011)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:00.54--ServerSession(1742166011)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2014-10-14 12:02:06.04--ServerSession(323450695)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2014-10-14 12:02:06.058--ServerSession(270037119)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2014-10-14 12:02:06.064--ServerSession(270037119)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2014-10-14 12:02:06.173--ServerSession(270037119)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2014-10-14 12:28:00.565--ServerSession(1742166011)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:00.606--ServerSession(278310028)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:00.611--ServerSession(278310028)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:00.716--ServerSession(278310028)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
+Error Code: 30000
+Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
+Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
+[EL Info]: 2014-10-14 12:28:00.809--ServerSession(278310028)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:00.841--ServerSession(833255933)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:00.846--ServerSession(833255933)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:00.945--ServerSession(833255933)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
+Error Code: 30000
+Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
+Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
+[EL Info]: 2014-10-14 12:28:00.983--ServerSession(833255933)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:01.022--ServerSession(581753265)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:01.026--ServerSession(581753265)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:01.152--ServerSession(581753265)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
 updateAmount, change: 30
-30
-[EL Info]: 2014-10-14 12:02:06.306--ServerSession(270037119)--file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+updateAmount, change: -30
+updateAmount, change: -1
+updateAmount, change: 30
+[EL Info]: 2014-10-14 12:28:01.334--ServerSession(581753265)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2014-10-14 12:28:01.386--ServerSession(854631101)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2014-10-14 12:28:01.392--ServerSession(854631101)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2014-10-14 12:28:01.531--ServerSession(854631101)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
+Error Code: 30000
+Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
+Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
+[EL Info]: 2014-10-14 12:28:01.585--ServerSession(854631101)--file:/C:/Users/Fabian/Development/TDP024/account-data-impl-db/build/classes/_account-dataPU logout successful
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[java.lang.IllegalArgumentException: Object: null is not a known entity type.
+	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.remove(EntityManagerImpl.java:504)
+	at se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB.remove(AccountEntityFacadeDB.java:205)
+	at se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.removeTest(AccountEntityFacadeTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:523)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1063)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:914)
+java.lang.Exception: transaction failed
+	at se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB.updateAmount(AccountEntityFacadeDB.java:159)
+	at se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.updateAmountTest(AccountEntityFacadeTest.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:523)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1063)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:914)
+java.lang.NullPointerException
+	at se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB.updateAmount(AccountEntityFacadeDB.java:145)
+	at se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.updateAmountTest(AccountEntityFacadeTest.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:523)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1063)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:914)
+]]></system-err>
 </testsuite>

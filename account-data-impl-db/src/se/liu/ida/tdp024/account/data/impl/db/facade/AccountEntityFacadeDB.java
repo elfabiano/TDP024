@@ -196,7 +196,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void remove(long id) {
+    public void remove(long id) throws Exception {
         EntityManager em = EMF.getEntityManager();
         try {
             em.getTransaction().begin();
@@ -206,6 +206,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.getTransaction().commit();
         } catch(Exception e){
             accountLogger.log(e);
+            throw e;
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();

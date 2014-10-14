@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.1" sequence="0" timestamp="1413280910000" analysisTimestamp="1413280976503" release="">
+<BugCollection version="2.0.1" sequence="0" timestamp="1413282398423" analysisTimestamp="1413282534147" release="">
   <Project>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes</Jar>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes</Jar>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/build/classes</Jar>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-impl/build/classes</Jar>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/build/web/WEB-INF/classes</Jar>
-    <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-util/build/classes</Jar>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/ant-contrib-1.0b3.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/derby.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/eclipselink-2.3.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-annotations-2.2.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-core-2.2.2.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jackson-databind-2.2.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoagent.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jacocoant.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/javax.persistence-2.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/junit-4.10.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/sonar-ant-task-2.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/activation.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jaxb-api.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jaxb/jsr173_api.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/asm-3.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-core-asl-1.7.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-jaxrs-1.7.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-mapper-asl-1.7.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jackson-xc-1.7.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-apache-client-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-atom-abdera-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-client-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-core-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-guice-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-json-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-multipart-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-server-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-simple-server-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jersey-spring-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jettison-1.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/jsr311-api-1.1.1.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs8527969965480385397.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs8651083901669905870.jar</AuxClasspathEntry>
-    <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/src</SrcDir>
-    <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/src</SrcDir>
-    <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/src</SrcDir>
-    <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-impl/src</SrcDir>
-    <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-rest/src/java</SrcDir>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-data-api\build\classes</Jar>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-data-impl-db\build\classes</Jar>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-logic-api\build\classes</Jar>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-logic-impl\build\classes</Jar>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-rest\build\web\WEB-INF\classes</Jar>
+    <Jar>C:\Users\Fabian\Development\TDP024\account-util\build\classes</Jar>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\ant-contrib-1.0b3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\derby.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\eclipselink-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jackson-annotations-2.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jackson-core-2.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jackson-databind-2.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jacocoagent.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jacocoant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\javax.persistence-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\junit-4.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\org-netbeans-modules-java-j2seproject-copylibstask.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\org.eclipse.persistence.jpa.jpql_1.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\sonar-ant-task-2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jaxb\activation.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jaxb\jaxb-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jaxb\jsr173_api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\asm-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-core-asl-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-jaxrs-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-mapper-asl-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jackson-xc-1.7.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-apache-client-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-atom-abdera-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-client-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-core-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-guice-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-json-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-multipart-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-server-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-simple-server-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jersey-spring-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jettison-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-client-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-server-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\Development\TDP024\lib\jersey\oauth-signature-1.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\AppData\Local\Temp\findbugs5756875563366591820.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Fabian\AppData\Local\Temp\findbugs6917632018349624321.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\Fabian\Development\TDP024\account-data-api\src</SrcDir>
+    <SrcDir>C:\Users\Fabian\Development\TDP024\account-data-impl-db\src</SrcDir>
+    <SrcDir>C:\Users\Fabian\Development\TDP024\account-logic-api\src</SrcDir>
+    <SrcDir>C:\Users\Fabian\Development\TDP024\account-logic-impl\src</SrcDir>
+    <SrcDir>C:\Users\Fabian\Development\TDP024\account-rest\src\java</SrcDir>
   </Project>
   <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE" instanceHash="be3c25599a9a9fa448d03a5f0ab1bc88" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
     <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
@@ -258,7 +258,7 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <Description>Method returning array may expose internal representation</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 14 Oct 2014 12:01:50 +0200" total_classes="27" referenced_classes="142" total_bugs="5" total_size="640" num_packages="13" vm_version="23.25-b01" cpu_seconds="27.66" clock_seconds="9.53" peak_mbytes="205.98" alloc_mbytes="264.88" gc_seconds="0.36" priority_2="4" priority_1="1">
+  <FindBugsSummary timestamp="Tue, 14 Oct 2014 12:26:38 +0200" total_classes="27" referenced_classes="141" total_bugs="5" total_size="641" num_packages="13" vm_version="23.25-b01" cpu_seconds="26.88" clock_seconds="9.31" peak_mbytes="454.73" alloc_mbytes="888.94" gc_seconds="0.05" priority_2="4" priority_1="1">
     <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Account.java" bugCount="0" size="13"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Transaction.java" bugCount="0" size="13"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/facade/AccountEntityFacade.java" bugCount="0" size="8"/>
@@ -266,7 +266,7 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <FileStats path="se/liu/ida/tdp024/account/data/api/util/StorageFacade.java" bugCount="0" size="2"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/AccountDB.java" bugCount="0" size="40"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java" bugCount="2" size="42" bugHash="96aba9a8e09e20c8ef321218551e07c5"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="120"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="121"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/TransactionEntityFacadeDB.java" bugCount="0" size="69"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/Constants.java" bugCount="0" size="9"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/EMF.java" bugCount="0" size="14"/>
@@ -300,8 +300,8 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB" sourceFile="AccountDB.java" interface="false" size="40" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" sourceFile="TransactionDB.java" interface="false" size="42" bugs="2" priority_2="2"/>
     </PackageStats>
-    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="189">
-      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="120" bugs="0"/>
+    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="190">
+      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="121" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB" sourceFile="TransactionEntityFacadeDB.java" interface="false" size="69" bugs="0"/>
     </PackageStats>
     <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.util" total_bugs="0" total_types="3" total_size="29">
@@ -339,26 +339,19 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.util.logger.AccountLoggerMonlog" sourceFile="AccountLoggerMonlog.java" interface="false" size="17" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="878" invocations="845" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="38936" standardDeviationMircosecondsPerInvocation="2336"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="829" invocations="851" avgMicrosecondsPerInvocation="974" maxMicrosecondsPerInvocation="16210" standardDeviationMircosecondsPerInvocation="723"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="496" invocations="142" avgMicrosecondsPerInvocation="3498" maxMicrosecondsPerInvocation="49152" standardDeviationMircosecondsPerInvocation="8054"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="452" invocations="142" avgMicrosecondsPerInvocation="3186" maxMicrosecondsPerInvocation="53006" standardDeviationMircosecondsPerInvocation="7767"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="400" invocations="102" avgMicrosecondsPerInvocation="3922" maxMicrosecondsPerInvocation="37142" standardDeviationMircosecondsPerInvocation="6934"/>
-      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="389" invocations="93" avgMicrosecondsPerInvocation="4192" maxMicrosecondsPerInvocation="51604" standardDeviationMircosecondsPerInvocation="7449"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="373" invocations="99" avgMicrosecondsPerInvocation="3771" maxMicrosecondsPerInvocation="54277" standardDeviationMircosecondsPerInvocation="7428"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="339" invocations="93" avgMicrosecondsPerInvocation="3647" maxMicrosecondsPerInvocation="44380" standardDeviationMircosecondsPerInvocation="6468"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="268" invocations="93" avgMicrosecondsPerInvocation="2887" maxMicrosecondsPerInvocation="24161" standardDeviationMircosecondsPerInvocation="4594"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="263" invocations="142" avgMicrosecondsPerInvocation="1856" maxMicrosecondsPerInvocation="28050" standardDeviationMircosecondsPerInvocation="3921"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="215" invocations="68" avgMicrosecondsPerInvocation="3170" maxMicrosecondsPerInvocation="30926" standardDeviationMircosecondsPerInvocation="5063"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="192" invocations="392" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="15387" standardDeviationMircosecondsPerInvocation="880"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="159" invocations="142" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="18255" standardDeviationMircosecondsPerInvocation="2436"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="159" invocations="93" avgMicrosecondsPerInvocation="1713" maxMicrosecondsPerInvocation="20130" standardDeviationMircosecondsPerInvocation="3097"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="145" invocations="93" avgMicrosecondsPerInvocation="1564" maxMicrosecondsPerInvocation="17756" standardDeviationMircosecondsPerInvocation="3052"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="131" invocations="831" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="4225" standardDeviationMircosecondsPerInvocation="332"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="123" invocations="62" avgMicrosecondsPerInvocation="1986" maxMicrosecondsPerInvocation="118001" standardDeviationMircosecondsPerInvocation="14854"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="108" invocations="142" avgMicrosecondsPerInvocation="760" maxMicrosecondsPerInvocation="15628" standardDeviationMircosecondsPerInvocation="1857"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="97" invocations="142" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="13627" standardDeviationMircosecondsPerInvocation="1655"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="93" invocations="12" avgMicrosecondsPerInvocation="7756" maxMicrosecondsPerInvocation="16967" standardDeviationMircosecondsPerInvocation="6230"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="2384" invocations="850" avgMicrosecondsPerInvocation="2804" maxMicrosecondsPerInvocation="6311" standardDeviationMircosecondsPerInvocation="1400"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="858" invocations="844" avgMicrosecondsPerInvocation="1017" maxMicrosecondsPerInvocation="25164" standardDeviationMircosecondsPerInvocation="2077"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="572" invocations="141" avgMicrosecondsPerInvocation="4057" maxMicrosecondsPerInvocation="53944" standardDeviationMircosecondsPerInvocation="8917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="465" invocations="141" avgMicrosecondsPerInvocation="3303" maxMicrosecondsPerInvocation="45376" standardDeviationMircosecondsPerInvocation="7443"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="278" invocations="141" avgMicrosecondsPerInvocation="1975" maxMicrosecondsPerInvocation="25137" standardDeviationMircosecondsPerInvocation="4057"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="217" invocations="392" avgMicrosecondsPerInvocation="555" maxMicrosecondsPerInvocation="18750" standardDeviationMircosecondsPerInvocation="1079"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="196" invocations="99" avgMicrosecondsPerInvocation="1981" maxMicrosecondsPerInvocation="25779" standardDeviationMircosecondsPerInvocation="4004"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="175" invocations="93" avgMicrosecondsPerInvocation="1882" maxMicrosecondsPerInvocation="11232" standardDeviationMircosecondsPerInvocation="2679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="154" invocations="93" avgMicrosecondsPerInvocation="1665" maxMicrosecondsPerInvocation="29657" standardDeviationMircosecondsPerInvocation="3606"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="149" invocations="93" avgMicrosecondsPerInvocation="1607" maxMicrosecondsPerInvocation="17064" standardDeviationMircosecondsPerInvocation="2890"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="145" invocations="102" avgMicrosecondsPerInvocation="1426" maxMicrosecondsPerInvocation="16272" standardDeviationMircosecondsPerInvocation="2752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="140" invocations="830" avgMicrosecondsPerInvocation="168" maxMicrosecondsPerInvocation="3818" standardDeviationMircosecondsPerInvocation="330"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="138" invocations="186" avgMicrosecondsPerInvocation="742" maxMicrosecondsPerInvocation="54862" standardDeviationMircosecondsPerInvocation="4234"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

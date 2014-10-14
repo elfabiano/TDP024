@@ -1,6 +1,8 @@
 package se.liu.ida.tdp024.account.data.test.facade;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -118,5 +120,23 @@ public class AccountEntityFacadeTest {
         } catch (Exception e) {
             Assert.assertTrue(true);
         }
+    }
+    
+    @Test
+    public void removeTest() throws Exception {
+        long id = accountEntityFacade.create("CHECK", "sdvkdvsnvkn", "dccdasccas");
+        Assert.assertTrue(accountEntityFacade.find(id) != null);
+        
+        try {
+            accountEntityFacade.remove(id + 1);
+            //Should not be reached
+            Assert.assertTrue(false);
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+        
+        accountEntityFacade.remove(id); 
+        
+        Assert.assertTrue(accountEntityFacade.find(id) == null);
     }
 }
