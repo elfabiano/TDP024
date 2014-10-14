@@ -46,8 +46,7 @@ public class AccountService {
             accounts = accountLogicFacade.find(name);
             json = jsonSerializer.toJson(accounts);
         } catch (Exception ex) {
-            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
-            
+            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);            
         }      
       return Response.ok().entity(json).build();
   }

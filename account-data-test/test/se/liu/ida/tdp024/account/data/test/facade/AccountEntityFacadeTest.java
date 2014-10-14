@@ -1,9 +1,10 @@
 package se.liu.ida.tdp024.account.data.test.facade;
 
-import java.text.SimpleDateFormat;
+import java.util.List;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
+import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
 import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
@@ -22,7 +23,7 @@ public class AccountEntityFacadeTest {
     
     @Test
     public void testCreate() {
-        String accType = "Debit";
+        String accType = "CHECK";
         String personKey = "asgahfshs82";
         String bankKey = "blablablabla";
         
@@ -33,49 +34,89 @@ public class AccountEntityFacadeTest {
     
     @Test
     public void findTest() {
-        String accType = "Debit";
+        String accType = "CHECK";
         String personKey = "asgahfshs82";
         String bankKey = "blablablabla";
         
-        long id = accountEntityFacade.create(accType, personKey, bankKey);
-        
-        
-        
+        long id = accountEntityFacade.create(accType, personKey, bankKey);       
         Assert.assertTrue(accountEntityFacade.find(id) != null);
     }
     
     @Test
+    public void findFailTest() {
+        String accType = "CHECK";
+        String personKey = "asgahfshs82";
+        String bankKey = "blablablabla";
+        
+        long id = accountEntityFacade.create(accType, personKey, bankKey);       
+        Assert.assertTrue(accountEntityFacade.find(id + 1) == null);
+    }
+    
+    @Test
     public void findAllTest() {
+        storageFacade.emptyStorage();
 
-        accountEntityFacade.create("Debit", "badgadgadgadg", "agasgasgagasg");
-        accountEntityFacade.create("Debit", "asfasfafadsfas", "sdfsdfsadfsfs");
-        accountEntityFacade.create("Credit", "fbdfhdtjrths", "fadgsfbdfbdferghs");
-        accountEntityFacade.create("Debit", "gsfbcgdgsdgs", "sdfsdfaweref");
-        accountEntityFacade.create("Credit", "fhdfndfhsdfadf", "vadgfdhghgadg");
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
+        accountEntityFacade.create("CHECK", "asfasfafadsfas", "sdfsdfsadfsfs");
+        accountEntityFacade.create("CHECK", "fbdfhdtjrths", "fadgsfbdfbdferghs");
+        accountEntityFacade.create("CHECK", "gsfbcgdgsdgs", "sdfsdfaweref");
+        accountEntityFacade.create("CHECK", "fhdfndfhsdfadf", "vadgfdhghgadg");
         
-        
-        Assert.assertTrue(accountEntityFacade.findAll() != null);
+        List<Account> accounts = accountEntityFacade.findAll();
+        Assert.assertTrue(accounts.size() == 5);
     }
     
     @Test
     public void findAllTestKey() {
+        storageFacade.emptyStorage();
 
-        accountEntityFacade.create("Debit", "badgadgadgadg", "agasgasgagasg");
-        accountEntityFacade.create("Debit", "asfasfafadsfas", "sdfsdfsadfsfs");
-        accountEntityFacade.create("Credit", "badgadgadgadg", "fadgsfbdfbdferghs");
-        accountEntityFacade.create("Debit", "gsfbcgdgsdgs", "sdfsdfaweref");
-        accountEntityFacade.create("Credit", "fhdfndfhsdfadf", "vadgfdhghgadg");
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
+        accountEntityFacade.create("CHECK", "asfasfafadsfas", "sdfsdfsadfsfs");
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "fadgsfbdfbdferghs");
+        accountEntityFacade.create("CHECK", "gsfbcgdgsdgs", "sdfsdfaweref");
+        accountEntityFacade.create("CHECK", "fhdfndfhsdfadf", "vadgfdhghgadg");
         
+        List<Account> accounts = accountEntityFacade.findAll("badgadgadgadg");
         
-        Assert.assertTrue(accountEntityFacade.findAll("badgadgadgadg") != null);
+        Assert.assertTrue(accounts.size() == 2);
     }
     
     @Test
-    public void updateAmount() {
+    public void findAllTestKeyFail() {
 
-        accountEntityFacade.create("Debit", "badgadgadgadg", "agasgasgagasg");
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
+        accountEntityFacade.create("CHECK", "asfasfafadsfas", "sdfsdfsadfsfs");
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "fadgsfbdfbdferghs");
+        accountEntityFacade.create("CHECK", "gsfbcgdgsdgs", "sdfsdfaweref");
+        accountEntityFacade.create("CHECK", "fhdfndfhsdfadf", "vadgfdhghgadg");
+        
+        List<Account> accounts = accountEntityFacade.findAll("cccss");
+        
+        Assert.assertTrue(accounts.size() == 0);
+    }
+    
+    @Test
+    public void updateAmountTest() throws Exception {
+        storageFacade.emptyStorage();
+
+        accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
         accountEntityFacade.updateAmount(1, 30);
-        System.out.println(accountEntityFacade.find(1).getHoldings());
-        Assert.assertTrue(accountEntityFacade.find(1).getHoldings() != 0);
+        Assert.assertTrue(accountEntityFacade.find(1).getHoldings() == 30);
+        
+        accountEntityFacade.updateAmount(1, -30);
+        
+        Assert.assertTrue(accountEntityFacade.find(1).getHoldings() == 0);
+        
+        try {
+            accountEntityFacade.updateAmount(1, -1);
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
+        
+        try {
+            accountEntityFacade.updateAmount(2, 30);
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
     }
 }

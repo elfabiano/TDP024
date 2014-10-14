@@ -119,7 +119,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void updateAmount(long id, int change) {
+    public void updateAmount(long id, int change) throws Exception {
         EntityManager em = EMF.getEntityManager();
         try {            
             em.getTransaction().begin();
