@@ -10,9 +10,9 @@ public interface AccountLogicFacade {
     
     public List<Account> find(String name) throws Exception;
     
-    public void debit(long id, int amount);
+    public void debit(long id, int amount) throws Exception;
     
-    public void credit(long id, int amount);
+    public void credit(long id, int amount) throws Exception;
     
     public List<Transaction> transactions(long id);
 }

@@ -50,8 +50,17 @@ public class AccountLogicFacadeTest {
                             account.getBankKey() != null &&
                             account.getHoldings() == 0 &&
                             account.getPersonKey() != null &&
-                            account.getAccountType().equals(accType));
+                            account.getAccountType().equals(accType));        
+    }
+    
+        @Test
+    public void testCreateFail() throws Exception {
+        String accType = "Savings";
+        String name = "Lisa Lis";
+        String bank = "SWEDBANK";
         
+        accountLogicFacade.create(accType,name, bank);
+             
     }
     
     @Test

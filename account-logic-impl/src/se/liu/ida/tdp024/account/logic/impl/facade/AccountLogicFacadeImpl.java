@@ -45,10 +45,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
 
 
-        accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
-        
-        
-        
+        accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));       
     }
 
     @Override
@@ -62,12 +59,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     }
 
     @Override
-    public void debit(long id, int amount) {
+    public void debit(long id, int amount) throws Exception {
         accountEntityFacade.updateAmount(id, -amount);
     }
 
     @Override
-    public void credit(long id, int amount) {
+    public void credit(long id, int amount) throws Exception {
         accountEntityFacade.updateAmount(id, amount);
     }
 
