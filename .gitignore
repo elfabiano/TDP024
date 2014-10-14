@@ -116,3 +116,4 @@ account-rest/build/web/WEB-INF/lib/account-logic-impl.jar
 account-data-api/nbproject/private/private.properties
 account-data-api/build/built-jar.properties
 /account-xfinal-test/dist/
+account-data-api/src/se/liu/ida/tdp024/account/data/api/facade/AccountEntityFacade.java
