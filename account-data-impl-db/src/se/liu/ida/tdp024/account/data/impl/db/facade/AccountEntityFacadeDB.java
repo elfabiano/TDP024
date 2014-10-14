@@ -22,7 +22,7 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 public class AccountEntityFacadeDB implements AccountEntityFacade {
     
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
-    private TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
+    private final TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     
     @Override
     public long create(String accountType, String personKey, String bankKey) {
@@ -119,7 +119,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void updateAmount(long id, int change) {
+    public void updateAmount(long id, int change) throws Exception {
         EntityManager em = EMF.getEntityManager();
         try {            
             em.getTransaction().begin();
@@ -161,6 +161,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
         } catch(Exception e){
             accountLogger.log(e);
+            throw e;
         }
         finally {
             if(em.getTransaction().isActive()) {
