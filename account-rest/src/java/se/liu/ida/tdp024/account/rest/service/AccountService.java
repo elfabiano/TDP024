@@ -40,16 +40,16 @@ public class AccountService {
   @GET
   @Path("find/name")
   public Response find(@QueryParam("name") String name) {
-      
+      String json = "[]";
       try {
             List<Account> accounts;
             accounts = accountLogicFacade.find(name);
-            String json = jsonSerializer.toJson(accounts);
-            return Response.ok().entity(json).build();
+            json = jsonSerializer.toJson(accounts);
         } catch (Exception ex) {
             Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
-            return Response.ok().entity("[]").build();
+            
         }      
+      return Response.ok().entity(json).build();
   }
   
   @GET
@@ -79,10 +79,13 @@ public class AccountService {
   @GET
   @Path("transactions")
   public Response transactions(@QueryParam("id") long id) {
-      List<Transaction> transactions = accountLogicFacade.transactions(id);
-      
-      String json = jsonSerializer.toJson(transactions);
-      
+      String json = "[]";
+      try {
+        List<Transaction> transactions = accountLogicFacade.transactions(id);
+        json = jsonSerializer.toJson(transactions);
+      } catch (Exception ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+      }
       return Response.ok().entity(json).build();
   }
 }

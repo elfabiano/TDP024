@@ -31,7 +31,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     public void create(String accountType, String name, String bank) throws Exception {
                 
         if (!(accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_CHECK) || accountType.equalsIgnoreCase(Constants.ACCOUNT_TYPE_SAVINGS))) {        
-            throw new Exception();
+            throw new IllegalArgumentException();
         }
             
         //Call SOA service
@@ -40,24 +40,27 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" ,name);
         Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
 
-
         String getBank = httpHelper.get("http://enterprise-systems.appspot.com/bank/find.name" ,"name" , bank);
         Map<String, String> bankKey = jsonSerializer.fromJson(getBank, Map.class);
-
+        
+        if (bankKey == null || personKey == null){
+            throw new IllegalArgumentException();
+        }
 
         accountEntityFacade.create(accountType, personKey.get("key"), bankKey.get("key"));
-        
-        
         
     }
 
     @Override
-    public List<Account> find(String name) {
+    public List<Account> find(String name) throws Exception{
         HTTPHelper httpHelper = new HTTPHelperImpl();
         
         String getPerson = httpHelper.get("http://enterprise-systems.appspot.com/person/find.name" ,"name" , name);
         Map<String, String> personKey = jsonSerializer.fromJson(getPerson, Map.class);
         
+        if (personKey == null) {
+            throw new IllegalArgumentException();
+        }
         return accountEntityFacade.findAll(personKey.get("key"));
     }
 
