@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" skipped="0" tests="3" time="58.601" timestamp="2014-10-13T20:34:23">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" skipped="0" tests="3" time="60.675" timestamp="2014-10-11T10:29:50">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
     <property name="ant.file.type.account-xfinal-test-impl" value="file" />
-    <property name="javac.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
+    <property name="javac.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
     <property name="libs.jsf20.maven-pom" value="" />
     <property name="libs.DataBindingME.src" value="C:\Program Files\NetBeans 8.0.1\mobility\sources\netbeans_databindingme-src.zip" />
     <property name="libs.junit.javadoc" value="C:\Program Files\NetBeans 8.0.1\java\docs\junit-3.8.2-api.zip" />
@@ -33,7 +33,6 @@
     <property name="sun.os.patch.level" value="" />
     <property name="libs.Java-EE-GlassFish-v3-Prelude.src" value="" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
-    <property name="reference.account-data-api.jar" value="../account-data-api/dist/account-data-api.jar" />
     <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
     <property name="netbeans.autoupdate.variant" value="" />
     <property name="have.tests" value="true" />
@@ -61,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher1424764699897055666.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit3118744013014571677.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher1414908100254609675.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit162372897578959749.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -72,7 +71,7 @@
     <property name="includes" value="**" />
     <property name="user.country" value="GB" />
     <property name="javadoc.encoding" value="UTF-8" />
-    <property name="javac.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar" />
+    <property name="javac.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar" />
     <property name="libs.jsp-compilation-syscp.src" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
     <property name="libs.spring-framework400.classpath" value="C:\Program Files\NetBeans 8.0.1\ide\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-aop-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-aspects-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-beans-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-build-src-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-context-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-context-support-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-core-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-expression-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-framework-bom-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-instrument-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-instrument-tomcat-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-jdbc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-jms-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-messaging-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-orm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-oxm-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-test-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-tx-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-web-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-webmvc-portlet-4.0.1.RELEASE.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-websocket-4.0.1.RELEASE.jar" />
@@ -105,7 +104,7 @@
     <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="true" />
-    <property name="javac.test.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
+    <property name="javac.test.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
     <property name="netbeans.buildnumber" value="201408251540" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="build.generated.sources.dir" value="build/generated-sources" />
@@ -142,7 +141,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="libs.jaxws21.classpath" value="C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\FastInfoset.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\gmbal-api-only.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\ha-api.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\javax.mail_1.4.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\jaxws-rt.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\jaxws-tools.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\management-api.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\mimepull.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\policy.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\saaj-impl.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\stax-ex.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\stax2-api.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\streambuffer.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\woodstox-core-asl.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\api\jaxws-api.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\api\jsr181-api.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\api\javax.annotation.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\jaxws22\api\saaj-api.jar;C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="libs.struts.src" value="" />
-    <property name="compile.on.save" value="false" />
     <property name="apple.awt.graphics.UseQuartz" value="true" />
     <property name="user.language" value="en" />
     <property name="testng.mode" value="testng" />
@@ -152,7 +150,7 @@
     <property name="test.binaryincludes" value="&lt;nothing&gt;" />
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="run.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar:build/test/classes" />
+    <property name="run.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar:build/test/classes" />
     <property name="ant.project.invoked-targets" value="test" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="C:\Program Files\NetBeans 8.0.1\platform\docs\swing-layout-1.0.4-doc.zip" />
@@ -185,7 +183,7 @@
     <property name="libs.jpa20-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_25\jre" />
     <property name="libs.jsp-compilation.src" value="" />
-    <property name="debug.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar:build/test/classes" />
+    <property name="debug.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar:build/test/classes" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
@@ -200,7 +198,7 @@
     <property name="libs.junit_4.javadoc" value="C:\Program Files\NetBeans 8.0.1\java\docs\junit-4.10-javadoc.jar" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
-    <property name="run.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes" />
+    <property name="run.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes" />
     <property name="jna.boot.library.name" value="jnidispatch-410" />
     <property name="libs.javaee-endorsed-api-6.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\javaee-api-7.0.jar" />
@@ -217,7 +215,7 @@
     <property name="javadoc.use" value="true" />
     <property name="sun.java2d.noddraw" value="true" />
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans 8.0.1\enterprise\ant\extra\jspcompile.jar" />
-    <property name="javac.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar" />
+    <property name="javac.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar" />
     <property name="javac.compilerargs" value="" />
     <property name="ant.file" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\build.xml" />
     <property name="ant.file.account-xfinal-test" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\build.xml" />
@@ -241,7 +239,7 @@
     <property name="junit.available" value="true" />
     <property name="libs.jsp-compiler.src" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin" />
-    <property name="debug.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:../account-data-api/dist/account-data-api.jar:../account-data-impl-db/dist/account-data-impl-db.jar:build/classes" />
+    <property name="debug.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes" />
     <property name="javadoc.private" value="false" />
     <property name="test.src.dir" value="test" />
     <property name="libs.jsf20.classpath" value="C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
@@ -299,20 +297,19 @@
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.j2me_common_ant.classpath" value="C:\Program Files\NetBeans 8.0.1\mobility\modules\org-netbeans-modules-j2me-common-ant.jar;C:\Program Files\NetBeans 8.0.1\java\modules\org-netbeans-modules-classfile.jar" />
-    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.0.1\platform\modules\ext\swing-layout-1.0.4.jar" />
     <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.0.1\platform\modules\ext\swing-layout-1.0.4.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.6" />
     <property name="build.generated.dir" value="build/generated" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.specification.version" value="1.7" />
-    <property name="java.vm.info" value="mixed mode" />
     <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode" />
     <property name="nb.junit.batch" value="true" />
     <property name="junit.forkmode" value="perTest" />
     <property name="user.country.format" value="SE" />
-    <property name="reference.account-data-impl-db.jar" value="../account-data-impl-db/dist/account-data-impl-db.jar" />
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_25\jre\classes" />
     <property name="javac.target" value="1.6" />
     <property name="built-jar.properties" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\built-jar.properties" />
@@ -324,7 +321,6 @@
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.DataBindingME-SVG.maven-pom" value="" />
     <property name="libs.jsf12.src" value="" />
-    <property name="project.account-data-impl-db" value="../account-data-impl-db" />
     <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
     <property name="libs.struts.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\struts-1.3.10-javadoc.zip" />
     <property name="ignore.failing.tests" value="true" />
@@ -339,8 +335,8 @@
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.7" />
     <property name="debug-transport-by-os" value="dt_shmem" />
-    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="java.runtime.version" value="1.7.0_25-b16" />
     <property name="build.test.results.dir" value="build/test/results" />
     <property name="file.reference.jackson-annotations-2.2.2.jar" value="../lib/jackson-annotations-2.2.2.jar" />
@@ -349,14 +345,12 @@
     <property name="libs.junit_4.classpath" value="C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
-    <property name="do.jar" value="true" />
     <property name="ant.file.account-xfinal-test-impl" value="C:\Users\Fabian\Development\TDP024\account-xfinal-test\nbproject\build-impl.xml" />
-    <property name="project.account-data-api" value="../account-data-api" />
-    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans 8.0.1\nb;C:\Program Files\NetBeans 8.0.1\ergonomics;C:\Program Files\NetBeans 8.0.1\ide;C:\Program Files\NetBeans 8.0.1\extide;C:\Program Files\NetBeans 8.0.1\java;C:\Program Files\NetBeans 8.0.1\apisupport;C:\Program Files\NetBeans 8.0.1\webcommon;C:\Program Files\NetBeans 8.0.1\websvccommon;C:\Program Files\NetBeans 8.0.1\enterprise;C:\Program Files\NetBeans 8.0.1\mobility;C:\Program Files\NetBeans 8.0.1\profiler;C:\Program Files\NetBeans 8.0.1\python;C:\Program Files\NetBeans 8.0.1\php;C:\Program Files\NetBeans 8.0.1\identity;C:\Program Files\NetBeans 8.0.1\harness;C:\Program Files\NetBeans 8.0.1\cnd;C:\Program Files\NetBeans 8.0.1\dlight;C:\Program Files\NetBeans 8.0.1\groovy;C:\Program Files\NetBeans 8.0.1\extra;C:\Program Files\NetBeans 8.0.1\javacard;C:\Program Files\NetBeans 8.0.1\javafx" />
-    <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
     <property name="libs.metro.src" value="" />
     <property name="endorsed.classpath" value="" />
@@ -366,8 +360,8 @@
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="libs.DataBindingME.javadoc" value="C:\Program Files\NetBeans 8.0.1\mobility\modules\docs\netbeans_databindingme-api.zip" />
-    <property name="java.class.path" value="C:\Users\Fabian\Development\TDP024\account-util\dist\account-util.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-annotations-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-core-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-databind-2.2.1.jar;C:\Users\Fabian\Development\TDP024\lib\junit-4.10.jar;C:\Users\Fabian\Development\TDP024\account-data-api\dist\account-data-api.jar;C:\Users\Fabian\Development\TDP024\account-data-impl-db\dist\account-data-impl-db.jar;C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\classes;C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar;C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\classes;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-junit4.jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="java.class.path" value="C:\Users\Fabian\Development\TDP024\account-util\dist\account-util.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-annotations-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-core-2.2.2.jar;C:\Users\Fabian\Development\TDP024\lib\jackson-databind-2.2.1.jar;C:\Users\Fabian\Development\TDP024\lib\junit-4.10.jar;C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\classes;C:\Program Files\NetBeans 8.0.1\platform\modules\ext\junit-4.10.jar;C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\classes;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-junit4.jar" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
     <property name="os.version" value="6.2" />
@@ -380,8 +374,8 @@
     <property name="libs.hibernate4-support.maven-pom" value="" />
     <property name="libs.Comet-GlassFish-v3.src" value="" />
     <property name="libs.restlib.javadoc" value="" />
-    <property name="nb.internal.action.name" value="test" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans 8.0.1\ide\modules\ext\jaxb\api\jaxb-api.jar" />
+    <property name="nb.internal.action.name" value="test" />
     <property name="libs.javaee-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.eclipselink.classpath" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\eclipselink\eclipselink.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar;C:\Program Files\NetBeans 8.0.1\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
     <property name="libs.beans-binding.javadoc" value="C:\Program Files\NetBeans 8.0.1\java\docs\beansbinding-1.2.1-doc.zip" />
@@ -407,8 +401,8 @@
     <property name="build.dir" value="build" />
     <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans 8.0.1\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans 8.0.1\extide\ant\lib\ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
-    <property name="file.encoding" value="Cp1252" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="file.encoding" value="Cp1252" />
     <property name="jdkBug6558476" value="false" />
     <property name="javadoc.nonavbar" value="false" />
     <property name="libs.spring-webmvc4.0.classpath" value="C:\Program Files\NetBeans 8.0.1\java\modules\ext\spring-4\spring-webmvc-4.0.1.RELEASE.jar" />
@@ -416,9 +410,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createFailure" time="8.459" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccess" time="6.638" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccessAllCombos" time="43.418" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createFailure" time="11.295" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccess" time="8.853" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccessAllCombos" time="40.385" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.io.FileNotFoundException: http://localhost:8080/account-rest/create/?name=Marcus+Bendtsen&bank=SWEDBANK&accounttype=SAVINGS
 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1623)

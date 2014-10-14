@@ -22,7 +22,7 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 public class AccountEntityFacadeDB implements AccountEntityFacade {
     
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
-    private final TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
+    private TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     
     @Override
     public long create(String accountType, String personKey, String bankKey) {
@@ -119,7 +119,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void updateAmount(long id, int change) throws Exception {
+    public void updateAmount(long id, int change) {
         EntityManager em = EMF.getEntityManager();
         try {            
             em.getTransaction().begin();
@@ -138,30 +138,24 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
                     status = Constants.TRANSACTION_STATUS_OK;
                 } 
                 else {                    
-                    status = Constants.TRANSACTION_STATUS_FAILED;                    
+                    status = Constants.TRANSACTION_STATUS_FAILED;
+                    long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
+                    addTransaction(id, transactionId);
+                    throw new Exception("transaction failed");
                 }
             }
             else {
-                transactionType = Constants.TRANSACTION_TYPE_CREDIT;
                 account.setHoldings(account.getHoldings() + change);
-                status = Constants.TRANSACTION_STATUS_OK;                
-            }           
+                status = Constants.TRANSACTION_STATUS_OK;
+                transactionType = Constants.TRANSACTION_TYPE_CREDIT;
+            }
         
             long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
-            Transaction transaction = em.find(TransactionDB.class, transactionId);
-            transaction.setAccount(account);
-            em.merge(transaction);
+            addTransaction(id, transactionId);
             em.merge(account);
             em.getTransaction().commit();
-            
-            if(status.equals(Constants.TRANSACTION_STATUS_FAILED)) {
-                em.close();
-                throw new Exception("transaction failed");
-            }
-            
         } catch(Exception e){
             accountLogger.log(e);
-            throw e;
         }
         finally {
             if(em.getTransaction().isActive()) {
