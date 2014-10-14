@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.1" sequence="0" timestamp="1413273004000" analysisTimestamp="1413273063615" release="">
+<BugCollection version="2.0.1" sequence="0" timestamp="1413280910000" analysisTimestamp="1413280976503" release="">
   <Project>
     <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/build/classes</Jar>
     <Jar>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/build/classes</Jar>
@@ -44,8 +44,8 @@
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-client-1.8.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-server-1.8.jar</AuxClasspathEntry>
     <AuxClasspathEntry>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/jersey/oauth-signature-1.8.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs1693235089577867706.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs5978831095169822653.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs8527969965480385397.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/var/folders/dm/23w4l45556s8ft042lllggs00000gn/T/findbugs8651083901669905870.jar</AuxClasspathEntry>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-api/src</SrcDir>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-impl-db/src</SrcDir>
     <SrcDir>/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-logic-api/src</SrcDir>
@@ -258,7 +258,7 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <Description>Method returning array may expose internal representation</Description>
   </BugCode>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Tue, 14 Oct 2014 09:50:04 +0200" total_classes="27" referenced_classes="142" total_bugs="5" total_size="636" num_packages="13" vm_version="23.25-b01" cpu_seconds="27.94" clock_seconds="10.56" peak_mbytes="210.46" alloc_mbytes="288.12" gc_seconds="0.39" priority_2="4" priority_1="1">
+  <FindBugsSummary timestamp="Tue, 14 Oct 2014 12:01:50 +0200" total_classes="27" referenced_classes="142" total_bugs="5" total_size="640" num_packages="13" vm_version="23.25-b01" cpu_seconds="27.66" clock_seconds="9.53" peak_mbytes="205.98" alloc_mbytes="264.88" gc_seconds="0.36" priority_2="4" priority_1="1">
     <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Account.java" bugCount="0" size="13"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/entity/Transaction.java" bugCount="0" size="13"/>
     <FileStats path="se/liu/ida/tdp024/account/data/api/facade/AccountEntityFacade.java" bugCount="0" size="8"/>
@@ -266,7 +266,7 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <FileStats path="se/liu/ida/tdp024/account/data/api/util/StorageFacade.java" bugCount="0" size="2"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/AccountDB.java" bugCount="0" size="40"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/entity/TransactionDB.java" bugCount="2" size="42" bugHash="96aba9a8e09e20c8ef321218551e07c5"/>
-    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="118"/>
+    <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/AccountEntityFacadeDB.java" bugCount="0" size="120"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/facade/TransactionEntityFacadeDB.java" bugCount="0" size="69"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/Constants.java" bugCount="0" size="9"/>
     <FileStats path="se/liu/ida/tdp024/account/data/impl/db/util/EMF.java" bugCount="0" size="14"/>
@@ -275,7 +275,7 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
     <FileStats path="se/liu/ida/tdp024/account/logic/api/facade/TransactionLogicFacade.java" bugCount="0" size="6"/>
     <FileStats path="se/liu/ida/tdp024/account/logic/impl/facade/AccountLogicFacadeImpl.java" bugCount="1" size="38" bugHash="87fd752072df56d8db81b01008abe57c"/>
     <FileStats path="se/liu/ida/tdp024/account/logic/impl/facade/TransactionLogicFacadeImpl.java" bugCount="0" size="18"/>
-    <FileStats path="se/liu/ida/tdp024/account/rest/service/AccountService.java" bugCount="0" size="39"/>
+    <FileStats path="se/liu/ida/tdp024/account/rest/service/AccountService.java" bugCount="0" size="41"/>
     <FileStats path="se/liu/ida/tdp024/account/rest/service/GenericResource.java" bugCount="0" size="9"/>
     <FileStats path="se/liu/ida/tdp024/account/rest/util/ApplicationConfiguration.java" bugCount="0" size="17"/>
     <FileStats path="se/liu/ida/tdp024/account/util/http/HTTPHelper.java" bugCount="0" size="3"/>
@@ -300,8 +300,8 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB" sourceFile="AccountDB.java" interface="false" size="40" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB" sourceFile="TransactionDB.java" interface="false" size="42" bugs="2" priority_2="2"/>
     </PackageStats>
-    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="187">
-      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="118" bugs="0"/>
+    <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.facade" total_bugs="0" total_types="2" total_size="189">
+      <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB" sourceFile="AccountEntityFacadeDB.java" interface="false" size="120" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB" sourceFile="TransactionEntityFacadeDB.java" interface="false" size="69" bugs="0"/>
     </PackageStats>
     <PackageStats package="se.liu.ida.tdp024.account.data.impl.db.util" total_bugs="0" total_types="3" total_size="29">
@@ -317,8 +317,8 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.logic.impl.facade.AccountLogicFacadeImpl" sourceFile="AccountLogicFacadeImpl.java" interface="false" size="38" bugs="1" priority_2="1"/>
       <ClassStats class="se.liu.ida.tdp024.account.logic.impl.facade.TransactionLogicFacadeImpl" sourceFile="TransactionLogicFacadeImpl.java" interface="false" size="18" bugs="0"/>
     </PackageStats>
-    <PackageStats package="se.liu.ida.tdp024.account.rest.service" total_bugs="0" total_types="2" total_size="48">
-      <ClassStats class="se.liu.ida.tdp024.account.rest.service.AccountService" sourceFile="AccountService.java" interface="false" size="39" bugs="0"/>
+    <PackageStats package="se.liu.ida.tdp024.account.rest.service" total_bugs="0" total_types="2" total_size="50">
+      <ClassStats class="se.liu.ida.tdp024.account.rest.service.AccountService" sourceFile="AccountService.java" interface="false" size="41" bugs="0"/>
       <ClassStats class="se.liu.ida.tdp024.account.rest.service.GenericResource" sourceFile="GenericResource.java" interface="false" size="9" bugs="0"/>
     </PackageStats>
     <PackageStats package="se.liu.ida.tdp024.account.rest.util" total_bugs="0" total_types="1" total_size="17">
@@ -339,26 +339,26 @@ a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
       <ClassStats class="se.liu.ida.tdp024.account.util.logger.AccountLoggerMonlog" sourceFile="AccountLoggerMonlog.java" interface="false" size="17" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1121" invocations="851" avgMicrosecondsPerInvocation="1317" maxMicrosecondsPerInvocation="56935" standardDeviationMircosecondsPerInvocation="3128"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="957" invocations="845" avgMicrosecondsPerInvocation="1132" maxMicrosecondsPerInvocation="69996" standardDeviationMircosecondsPerInvocation="3346"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="589" invocations="142" avgMicrosecondsPerInvocation="4153" maxMicrosecondsPerInvocation="60024" standardDeviationMircosecondsPerInvocation="9515"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="471" invocations="142" avgMicrosecondsPerInvocation="3319" maxMicrosecondsPerInvocation="39994" standardDeviationMircosecondsPerInvocation="7100"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="339" invocations="142" avgMicrosecondsPerInvocation="2389" maxMicrosecondsPerInvocation="32587" standardDeviationMircosecondsPerInvocation="5102"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="334" invocations="99" avgMicrosecondsPerInvocation="3382" maxMicrosecondsPerInvocation="58341" standardDeviationMircosecondsPerInvocation="7762"/>
-      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="328" invocations="93" avgMicrosecondsPerInvocation="3528" maxMicrosecondsPerInvocation="23347" standardDeviationMircosecondsPerInvocation="5118"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="315" invocations="102" avgMicrosecondsPerInvocation="3093" maxMicrosecondsPerInvocation="43685" standardDeviationMircosecondsPerInvocation="6458"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="297" invocations="93" avgMicrosecondsPerInvocation="3197" maxMicrosecondsPerInvocation="47562" standardDeviationMircosecondsPerInvocation="6365"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="262" invocations="93" avgMicrosecondsPerInvocation="2824" maxMicrosecondsPerInvocation="35147" standardDeviationMircosecondsPerInvocation="5113"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="222" invocations="392" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="18192" standardDeviationMircosecondsPerInvocation="1043"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="183" invocations="68" avgMicrosecondsPerInvocation="2699" maxMicrosecondsPerInvocation="27715" standardDeviationMircosecondsPerInvocation="4256"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="176" invocations="93" avgMicrosecondsPerInvocation="1895" maxMicrosecondsPerInvocation="48389" standardDeviationMircosecondsPerInvocation="5462"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="175" invocations="142" avgMicrosecondsPerInvocation="1238" maxMicrosecondsPerInvocation="18858" standardDeviationMircosecondsPerInvocation="2577"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="144" invocations="142" avgMicrosecondsPerInvocation="1015" maxMicrosecondsPerInvocation="22753" standardDeviationMircosecondsPerInvocation="2675"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="131" invocations="831" avgMicrosecondsPerInvocation="157" maxMicrosecondsPerInvocation="3428" standardDeviationMircosecondsPerInvocation="313"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="117" invocations="93" avgMicrosecondsPerInvocation="1265" maxMicrosecondsPerInvocation="16678" standardDeviationMircosecondsPerInvocation="2690"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="113" invocations="142" avgMicrosecondsPerInvocation="797" maxMicrosecondsPerInvocation="14542" standardDeviationMircosecondsPerInvocation="1763"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="110" invocations="62" avgMicrosecondsPerInvocation="1779" maxMicrosecondsPerInvocation="68170" standardDeviationMircosecondsPerInvocation="9348"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="105" invocations="142" avgMicrosecondsPerInvocation="744" maxMicrosecondsPerInvocation="9972" standardDeviationMircosecondsPerInvocation="1549"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="878" invocations="845" avgMicrosecondsPerInvocation="1039" maxMicrosecondsPerInvocation="38936" standardDeviationMircosecondsPerInvocation="2336"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="829" invocations="851" avgMicrosecondsPerInvocation="974" maxMicrosecondsPerInvocation="16210" standardDeviationMircosecondsPerInvocation="723"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="496" invocations="142" avgMicrosecondsPerInvocation="3498" maxMicrosecondsPerInvocation="49152" standardDeviationMircosecondsPerInvocation="8054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="452" invocations="142" avgMicrosecondsPerInvocation="3186" maxMicrosecondsPerInvocation="53006" standardDeviationMircosecondsPerInvocation="7767"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="400" invocations="102" avgMicrosecondsPerInvocation="3922" maxMicrosecondsPerInvocation="37142" standardDeviationMircosecondsPerInvocation="6934"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="389" invocations="93" avgMicrosecondsPerInvocation="4192" maxMicrosecondsPerInvocation="51604" standardDeviationMircosecondsPerInvocation="7449"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="373" invocations="99" avgMicrosecondsPerInvocation="3771" maxMicrosecondsPerInvocation="54277" standardDeviationMircosecondsPerInvocation="7428"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="339" invocations="93" avgMicrosecondsPerInvocation="3647" maxMicrosecondsPerInvocation="44380" standardDeviationMircosecondsPerInvocation="6468"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="268" invocations="93" avgMicrosecondsPerInvocation="2887" maxMicrosecondsPerInvocation="24161" standardDeviationMircosecondsPerInvocation="4594"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="263" invocations="142" avgMicrosecondsPerInvocation="1856" maxMicrosecondsPerInvocation="28050" standardDeviationMircosecondsPerInvocation="3921"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="215" invocations="68" avgMicrosecondsPerInvocation="3170" maxMicrosecondsPerInvocation="30926" standardDeviationMircosecondsPerInvocation="5063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="192" invocations="392" avgMicrosecondsPerInvocation="490" maxMicrosecondsPerInvocation="15387" standardDeviationMircosecondsPerInvocation="880"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="159" invocations="142" avgMicrosecondsPerInvocation="1122" maxMicrosecondsPerInvocation="18255" standardDeviationMircosecondsPerInvocation="2436"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="159" invocations="93" avgMicrosecondsPerInvocation="1713" maxMicrosecondsPerInvocation="20130" standardDeviationMircosecondsPerInvocation="3097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="145" invocations="93" avgMicrosecondsPerInvocation="1564" maxMicrosecondsPerInvocation="17756" standardDeviationMircosecondsPerInvocation="3052"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="131" invocations="831" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="4225" standardDeviationMircosecondsPerInvocation="332"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="123" invocations="62" avgMicrosecondsPerInvocation="1986" maxMicrosecondsPerInvocation="118001" standardDeviationMircosecondsPerInvocation="14854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="108" invocations="142" avgMicrosecondsPerInvocation="760" maxMicrosecondsPerInvocation="15628" standardDeviationMircosecondsPerInvocation="1857"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="97" invocations="142" avgMicrosecondsPerInvocation="689" maxMicrosecondsPerInvocation="13627" standardDeviationMircosecondsPerInvocation="1655"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.StreamResourceTracker" totalMilliseconds="93" invocations="12" avgMicrosecondsPerInvocation="7756" maxMicrosecondsPerInvocation="16967" standardDeviationMircosecondsPerInvocation="6230"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

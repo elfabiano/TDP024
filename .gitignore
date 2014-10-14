@@ -117,3 +117,8 @@ account-data-api/nbproject/private/private.properties
 account-data-api/build/built-jar.properties
 /account-xfinal-test/dist/
 account-data-api/src/se/liu/ida/tdp024/account/data/api/facade/AccountEntityFacade.java
+/account-data-api/build/
+/account-data-api/dist/
+/account-util/build/
+/account-util/dist/
+/account-data-impl-db/dist/

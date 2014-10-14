@@ -65,12 +65,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     }
 
     @Override
-    public void debit(long id, int amount) {
+    public void debit(long id, int amount) throws Exception{
         accountEntityFacade.updateAmount(id, -amount);
     }
 
     @Override
-    public void credit(long id, int amount) {
+    public void credit(long id, int amount) throws Exception{
         accountEntityFacade.updateAmount(id, amount);
     }
 

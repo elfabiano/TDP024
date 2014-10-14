@@ -60,6 +60,7 @@ public class AccountService {
         accountLogicFacade.debit(id, amount);
         return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       } catch (Exception e) {
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, e);
           return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
     }
@@ -72,6 +73,7 @@ public class AccountService {
         accountLogicFacade.credit(id, amount);
         return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
       } catch (Exception e) {
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, e);
           return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
     }

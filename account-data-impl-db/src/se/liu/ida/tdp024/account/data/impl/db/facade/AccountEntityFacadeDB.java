@@ -124,7 +124,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         try {            
             em.getTransaction().begin();
             Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
-        
             String status;
             String transactionType;
             
@@ -139,9 +138,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
                 } 
                 else {                    
                     status = Constants.TRANSACTION_STATUS_FAILED;
-                    long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
-                    addTransaction(id, transactionId);
-                    throw new Exception("transaction failed");
+                    
                 }
             }
             else {
@@ -151,9 +148,17 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             }
         
             long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
-            addTransaction(id, transactionId);
+            Transaction transaction = em.find(TransactionDB.class, transactionId);
+            transaction.setAccount(account);
             em.merge(account);
+            em.merge(transaction);
             em.getTransaction().commit();
+            
+            if (status.equals((Constants.TRANSACTION_STATUS_FAILED))){
+                em.close();
+                throw new Exception("transaction failed");
+            }
+            
         } catch(Exception e){
             accountLogger.log(e);
         }
