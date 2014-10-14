@@ -1,7 +1,6 @@
 package se.liu.ida.tdp024.account.data.api.facade;
 
 import java.util.List;
-import javax.persistence.OptimisticLockException;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 public interface AccountEntityFacade {
@@ -17,6 +16,6 @@ public interface AccountEntityFacade {
     
     public void addTransaction(long accountId, long transactionId);
 
-    public void remove(long id);
+    public void remove(long id) throws Exception;
     
 }
