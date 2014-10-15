@@ -5,6 +5,8 @@
         <group>
             <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/util/StorageFacadeTest.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/facade/TransactionEntityFacadeTest.java</file>
+            <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/entity/TransactionTest.java</file>
+            <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/entity/AccountTest.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/test/se/liu/ida/tdp024/account/data/test/facade/AccountEntityFacadeTest.java</file>
             <file>file:/C:/Users/Fabian/Development/TDP024/account-data-test/nbproject/private/private.properties</file>
         </group>

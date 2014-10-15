@@ -86,7 +86,9 @@ public class AccountServiceTest {
     }
     
     @Test
-    public void testDedit() {
+    public void testDebit() {
+        storageFacade.emptyStorage();
+        
         AccountService accS1= new AccountService();
         String AccType = "CHECK";
         String person = "Lisa Lisasson";
@@ -115,6 +117,8 @@ public class AccountServiceTest {
     
     @Test
     public void testCredit() {
+        storageFacade.emptyStorage();
+        
         AccountService accS1= new AccountService();
         String AccType = "CHECK";
         String person = "Lisa Lisasson";

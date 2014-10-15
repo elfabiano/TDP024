@@ -22,7 +22,7 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 public class AccountEntityFacadeDB implements AccountEntityFacade {
     
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
-    private TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
+    private final TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     
     @Override
     public long create(String accountType, String personKey, String bankKey) {
@@ -161,6 +161,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
         } catch(Exception e){
             accountLogger.log(e);
+            throw e;
         }
         finally {
             if(em.getTransaction().isActive()) {
@@ -185,8 +186,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.getTransaction().commit();
         }
         catch(Exception e){
-            System.out.println("DETTA ÄR ETT FEL SOM KASTAS!!!!");
             accountLogger.log(e);
+            throw e;
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();

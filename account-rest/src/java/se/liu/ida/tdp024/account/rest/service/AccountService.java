@@ -56,12 +56,13 @@ public class AccountService {
   public Response debit(@QueryParam("id") long id,
                         @QueryParam("amount") int amount) {  
       try {
-        accountLogicFacade.debit(id, amount);
-        return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
+        accountLogicFacade.debit(id, amount);        
       } catch (Exception e) {
           Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, e);
           return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
       }
+      
+      return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
     }
   
   @GET
