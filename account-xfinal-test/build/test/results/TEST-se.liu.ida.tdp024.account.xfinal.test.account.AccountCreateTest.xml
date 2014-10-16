@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" skipped="0" tests="3" time="56.851" timestamp="2014-10-15T14:11:34">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" skipped="0" tests="3" time="56.858" timestamp="2014-10-16T08:17:08">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
@@ -61,7 +61,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher4485425369646093944.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit1630564928606276845.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher997932279514154159.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit4200185428148457477.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -416,9 +416,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createFailure" time="8.487" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccessAllCombos" time="44.312" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccess" time="3.966" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createFailure" time="8.622" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccess" time="7.827" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.AccountCreateTest" name="createSuccessAllCombos" time="40.315" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.io.FileNotFoundException: http://localhost:8080/account-rest/create/?name=Marcus+Bendtsen&bank=SWEDBANK&accounttype=SAVINGS
 	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1623)

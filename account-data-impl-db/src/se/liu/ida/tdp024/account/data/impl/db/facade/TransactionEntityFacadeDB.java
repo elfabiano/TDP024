@@ -100,7 +100,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
     }
 
     @Override
-    public void update(long id, String type, int amount, String status) {
+    public void update(long id, String type, int amount, String status) throws Exception {
         EntityManager em = EMF.getEntityManager();
         
         try {
@@ -114,6 +114,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
         }
         catch (Exception e) {
             logger.log(e);
+            throw e;
         }
         finally {
             if(em.getTransaction().isActive()) {
@@ -124,7 +125,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
     }
 
     @Override
-    public void remove(long id) {
+    public void remove(long id) throws Exception {
         EntityManager em  = EMF.getEntityManager();
         
         
@@ -137,6 +138,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade {
         }
         catch (Exception e) {
             logger.log(e);
+            throw e;
         }
         finally {
             if(em.getTransaction().isActive()) {

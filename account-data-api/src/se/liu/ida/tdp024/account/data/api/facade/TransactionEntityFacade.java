@@ -19,7 +19,7 @@ public interface TransactionEntityFacade {
     
     public List<Transaction> findAll();
     
-    public void update(long id, String type, int amount, String status);
+    public void update(long id, String type, int amount, String status) throws Exception;
     
-    public void remove(long id);
+    public void remove(long id) throws Exception;
 }

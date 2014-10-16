@@ -72,7 +72,7 @@ public class TransactionEntityFacadeTest {
     }
     
     @Test
-    public void updateTest() {
+    public void updateTest() throws Exception {
         long id = transactionEntityFacade.create("DEBIT", 5000, "OK");
         transactionEntityFacade.update(id, "CREDIT", 5000, "OK");
         Transaction transaction = transactionEntityFacade.find(id);
@@ -81,17 +81,23 @@ public class TransactionEntityFacadeTest {
     }
     
     @Test
-    public void updateFailTest() {
+    public void updateFailTest() throws Exception {
         storageFacade.emptyStorage();
         long id = transactionEntityFacade.create("DEBIT", 5000, "OK");
-        transactionEntityFacade.update(id + 1, "CREDIT", 5000, "OK");
+        try {
+            transactionEntityFacade.update(id + 1, "CREDIT", 5000, "OK");
+            //Should not be reached
+            Assert.assertTrue(false);
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
         Transaction transaction = transactionEntityFacade.find(id);
         
         Assert.assertTrue(transaction.getType().equals("DEBIT"));
     }
     
     @Test
-    public void removeTest() {
+    public void removeTest() throws Exception {
         long id = transactionEntityFacade.create("CREDIT", 2000, "OK");
         
         transactionEntityFacade.remove(id);
@@ -104,7 +110,13 @@ public class TransactionEntityFacadeTest {
         storageFacade.emptyStorage();
         long id = transactionEntityFacade.create("CREDIT", 2000, "OK");
         
-        transactionEntityFacade.remove(id + 1);
+        try {
+            transactionEntityFacade.remove(id + 1);
+            //Should not be reached
+            Assert.assertTrue(false);
+        } catch (Exception e) {
+            Assert.assertTrue(true);
+        }
         
         Assert.assertFalse(transactionEntityFacade.find(id) == null);
     }

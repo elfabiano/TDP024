@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="45.517" timestamp="2014-10-15T14:12:34">
+<testsuite errors="0" failures="0" hostname="FabiansHP" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="45.261" timestamp="2014-10-16T08:18:08">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="GB" />
@@ -61,7 +61,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher7588661454746594366.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit3270078033658398926.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\test\results\TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junitvmwatcher6599686226680716983.properties propsfile=C:\Users\Fabian\Development\TDP024\account-xfinal-test\build\junit951275472871772217.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -416,9 +416,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.1\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="21.996" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="22.03" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="1.42" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="22.727" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="21.684" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.787" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
