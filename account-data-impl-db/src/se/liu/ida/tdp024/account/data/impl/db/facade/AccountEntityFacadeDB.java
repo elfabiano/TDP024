@@ -126,8 +126,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
             String status;
             String transactionType;
-            
-            System.out.println("updateAmount, change: " + change);
         
             if(change < 0) { 
                 transactionType = Constants.TRANSACTION_TYPE_DEBIT;

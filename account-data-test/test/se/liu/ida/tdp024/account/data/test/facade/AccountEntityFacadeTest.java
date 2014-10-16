@@ -34,7 +34,6 @@ public class AccountEntityFacadeTest {
         String bankKey = "blablablabla";
         
         long id = accountEntityFacade.create(accType, personKey, bankKey);
-        System.out.println(id);
         Assert.assertFalse(id==0);
     }
     
