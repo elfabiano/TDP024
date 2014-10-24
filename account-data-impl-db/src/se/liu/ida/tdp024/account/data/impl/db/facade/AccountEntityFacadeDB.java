@@ -1,9 +1,13 @@
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
+import se.liu.ida.tdp024.account.util.exceptions.AccountBalanceException;
+import se.liu.ida.tdp024.account.util.exceptions.ServiceConfigurationException;
+import se.liu.ida.tdp024.account.util.exceptions.InputParameterException;
 import static java.lang.StrictMath.abs;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
+import javax.persistence.*;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -12,6 +16,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
+import se.liu.ida.tdp024.account.util.exceptions.EntityNotFoundException;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
 import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.Constants;
@@ -25,7 +30,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     private final TransactionEntityFacade transactionEntityFacade = new TransactionEntityFacadeDB();
     
     @Override
-    public long create(String accountType, String personKey, String bankKey) {
+    public long create(String accountType, String personKey, String bankKey) throws 
+            InputParameterException, 
+            ServiceConfigurationException{
         EntityManager em = EMF.getEntityManager();
         
         try {
@@ -42,9 +49,12 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
             return account.getId();            
         }
-        catch(Exception e){
+        catch(IllegalArgumentException e){
             accountLogger.log(e);
-            return 0;
+            throw new InputParameterException("Wrong parameters.");}
+        catch(RollbackException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -54,21 +64,25 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public Account find(long id) {
+    public Account find(long id) throws EntityNotFoundException, InputParameterException{
         EntityManager em = EMF.getEntityManager();
-        try {            
-            return em.find(AccountDB.class, id);
-        } catch(Exception e){
+        try {   
+            Account result = em.find(AccountDB.class, id);
+            if (result == null){
+                throw new EntityNotFoundException("Account does not exist.");
+            }
+            return result;
+        } 
+        catch(IllegalArgumentException e){
             accountLogger.log(e);
-            return null; 
+            throw new InputParameterException("Wrong Parameters.");
         } finally {
             em.close();
         }
-           
     }
 
     @Override
-    public List<Account> findAll() {
+    public List<Account> findAll() throws ServiceConfigurationException{
         EntityManager em = EMF.getEntityManager();
         try {
             CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -82,9 +96,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
             return results;
             
-        } catch(Exception e){
+        } catch(IllegalArgumentException e){
             accountLogger.log(e);
-            return null; 
+            throw new ServiceConfigurationException("Server Error.");
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -94,7 +108,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public List<Account> findAll(String personKey) {
+    public List<Account> findAll(String personKey) throws ServiceConfigurationException{
         EntityManager em = EMF.getEntityManager();
         try {
             CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -107,9 +121,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             List<Account> results = q.getResultList();
                         
             return results;
-        } catch(Exception e){
+        } catch(IllegalArgumentException e){
             accountLogger.log(e);
-            return null; 
+            throw new ServiceConfigurationException("Server Error."); 
         } finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -119,11 +133,18 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void updateAmount(long id, int change) throws Exception {
+    public void updateAmount(long id, int change) throws 
+            InputParameterException, 
+            EntityNotFoundException,
+            ServiceConfigurationException,
+            AccountBalanceException{
         EntityManager em = EMF.getEntityManager();
         try {            
             em.getTransaction().begin();
             Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
+            if (account == null){
+                throw new EntityNotFoundException("Account does not exist.");
+            }
             String status;
             String transactionType;
         
@@ -147,20 +168,34 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         
             long transactionId = transactionEntityFacade.create(transactionType, abs(change), status); 
             Transaction transaction = em.find(TransactionDB.class, transactionId);
+            if (transaction == null){
+                //Should not be thrown
+                throw new EntityNotFoundException("Transaction does not exist.");
+            }
             transaction.setAccount(account);
             em.merge(account);
             em.merge(transaction);
             em.getTransaction().commit();
             
             if (status.equals((Constants.TRANSACTION_STATUS_FAILED))){
-                em.close();
-                throw new Exception("transaction failed");
+                throw new AccountBalanceException();
             }
             
-        } catch(Exception e){
+        } 
+        catch(IllegalArgumentException e){
             accountLogger.log(e);
-            throw e;
+            throw new InputParameterException("Wrong parameters.");
+        } catch(PessimisticLockException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
         }
+        catch(LockTimeoutException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
+        } catch(PersistenceException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
+        } 
         finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -170,23 +205,36 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void addTransaction(long accountId, long transactionId) throws Exception {
+    public void addTransaction(long accountId, long transactionId) throws 
+            EntityNotFoundException, 
+            InputParameterException,
+            ServiceConfigurationException{
         EntityManager em = EMF.getEntityManager();
         try {
             em.getTransaction().begin();
             
             Account account = em.find(AccountDB.class, accountId);
+            if (account == null){
+                throw new EntityNotFoundException();
+            }
             
             Transaction transaction = em.find(TransactionDB.class, transactionId);
+            if (transaction == null){
+                throw new EntityNotFoundException();
+            }
             transaction.setAccount(account);
             em.merge(transaction);
             
             em.getTransaction().commit();
         }
-        catch(Exception e){
+        catch(IllegalArgumentException e){
             accountLogger.log(e);
-            throw e;
-        } finally {
+            throw new InputParameterException("Wrong parameters.");
+        } 
+        catch(RollbackException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
+        }finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }
@@ -195,18 +243,29 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void remove(long id) throws Exception {
+    public void remove(long id) throws 
+            EntityNotFoundException, 
+            InputParameterException, 
+            ServiceConfigurationException  {
         EntityManager em = EMF.getEntityManager();
         try {
             em.getTransaction().begin();
             
             Account account = em.find(AccountDB.class, id);
+            if (account == null){
+                throw new EntityNotFoundException();
+            }
+            
             em.remove(account);
             em.getTransaction().commit();
-        } catch(Exception e){
+        } catch(IllegalArgumentException e){
             accountLogger.log(e);
-            throw e;
-        } finally {
+            throw new InputParameterException("Wrong parameters.");
+        } 
+        catch(RollbackException e){
+            accountLogger.log(e);
+            throw new ServiceConfigurationException("Server Error.");
+        }finally {
             if(em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }

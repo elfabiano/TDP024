@@ -9,6 +9,9 @@ import java.util.List;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.TransactionLogicFacade;
+import se.liu.ida.tdp024.account.util.exceptions.EntityNotFoundException;
+import se.liu.ida.tdp024.account.util.exceptions.InputParameterException;
+import se.liu.ida.tdp024.account.util.exceptions.ServiceConfigurationException;
 
 
 /**
@@ -22,29 +25,37 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
         this.transactionEntityFacade = transactionEntityFacade;
     }
 
+    
     @Override
-    public long create(String type, int amount, String status) {
+    public long create(String type, int amount, String status) throws InputParameterException, ServiceConfigurationException {
         return transactionEntityFacade.create(type, amount, status);
     }
     
     @Override
-    public Transaction find(long id) {
+    public Transaction find(long id) throws InputParameterException, EntityNotFoundException{
         return transactionEntityFacade.find(id);        
     }
     
     @Override
-    public List<Transaction> findAll() {
+    public List<Transaction> findAll() throws ServiceConfigurationException {
         return transactionEntityFacade.findAll();
     }
 
     @Override
-    public void update(long id, String type, int amount, String status) {
+    public void update(long id, String type, int amount, String status) throws 
+            EntityNotFoundException, 
+            ServiceConfigurationException {
+        
         transactionEntityFacade.update(id, type, amount, status);
     }
 
     @Override
-    public void remove(long id) {
-        transactionEntityFacade.remove(id);
+    public void remove(long id) throws 
+            EntityNotFoundException, 
+            InputParameterException, 
+            ServiceConfigurationException {
+            transactionEntityFacade.remove(id);
+
     }
 
 }

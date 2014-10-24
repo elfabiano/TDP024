@@ -13,9 +13,20 @@ import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.Constants;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.logic.impl.facade.AccountLogicFacadeImpl;
+import se.liu.ida.tdp024.account.util.exceptions.AccountBalanceException;
+import se.liu.ida.tdp024.account.util.exceptions.EntityNotFoundException;
+import se.liu.ida.tdp024.account.util.exceptions.InputParameterException;
+import se.liu.ida.tdp024.account.util.exceptions.ServiceConfigurationException;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
 
+/*Errors:
+    200 - OK
+*   201 - Created
+*   400 - Bad request (Input parameter exception)
+*   500 - Internal server error
+*   404 - Resource not found
+*/
 @Path("/account")
 public class AccountService {
     private final AccountLogicFacade accountLogicFacade = new AccountLogicFacadeImpl(new AccountEntityFacadeDB()); 
@@ -30,10 +41,15 @@ public class AccountService {
       
       try {
           accountLogicFacade.create(accountType, name, bank);
-          return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
+          return Response.status(201).build();
       }
-      catch (Exception e){
-          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
+      catch (InputParameterException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).entity(ex.getMessage()).build();
+      }
+      catch (ServiceConfigurationException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(500).entity(ex.getMessage()).build();
       }
   }
   
@@ -45,9 +61,14 @@ public class AccountService {
             List<Account> accounts;
             accounts = accountLogicFacade.find(name);
             json = jsonSerializer.toJson(accounts);
-        } catch (Exception ex) {
-            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);            
-        }      
+        } catch (InputParameterException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).entity(ex.getMessage()).build();
+      }
+      catch (ServiceConfigurationException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(500).entity(ex.getMessage()).build();
+      }    
       return Response.ok().entity(json).build();
   }
   
@@ -57,12 +78,23 @@ public class AccountService {
                         @QueryParam("amount") int amount) {  
       try {
         accountLogicFacade.debit(id, amount);        
-      } catch (Exception e) {
-          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, e);
-          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
+      } catch (InputParameterException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).build();
+      }
+      catch (ServiceConfigurationException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(500).entity(ex.getMessage()).build();
+      } catch (EntityNotFoundException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(404).entity(ex.getMessage()).build();
+      }
+      catch (AccountBalanceException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).entity(ex.getMessage()).build();
       }
       
-      return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
+      return Response.ok().build();
     }
   
   @GET
@@ -71,11 +103,22 @@ public class AccountService {
                          @QueryParam("amount") int amount) {
       try {
         accountLogicFacade.credit(id, amount);
-        return Response.ok().entity(Constants.TRANSACTION_STATUS_OK).build();
-      } catch (Exception e) {
-          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, e);
-          return Response.ok().entity(Constants.TRANSACTION_STATUS_FAILED).build();
+      } catch (InputParameterException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).build();
       }
+      catch (ServiceConfigurationException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(500).entity(ex.getMessage()).build();
+      } catch (EntityNotFoundException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(404).entity(ex.getMessage()).build();
+      }
+      catch (AccountBalanceException ex){
+          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+          return Response.status(400).entity(ex.getMessage()).build();
+      }
+      return Response.ok().build();
     }
   
   @GET
@@ -85,9 +128,13 @@ public class AccountService {
       try {
         List<Transaction> transactions = accountLogicFacade.transactions(id);
         json = jsonSerializer.toJson(transactions);
-      } catch (Exception ex){
-          Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
-      }
+      } catch (EntityNotFoundException ex) { 
+            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+            return Response.status(404).entity(ex.getMessage()).build();
+        } catch (InputParameterException ex) {
+            Logger.getLogger(AccountService.class.getName()).log(Level.SEVERE, null, ex);
+            return Response.status(400).entity(ex.getMessage()).build();
+        } 
       return Response.ok().entity(json).build();
   }
 }

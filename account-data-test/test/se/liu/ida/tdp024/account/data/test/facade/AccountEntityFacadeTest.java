@@ -9,6 +9,9 @@ import org.junit.Test;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
+import se.liu.ida.tdp024.account.util.exceptions.EntityNotFoundException;
+import se.liu.ida.tdp024.account.util.exceptions.InputParameterException;
+import se.liu.ida.tdp024.account.util.exceptions.ServiceConfigurationException;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
 import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
 import se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB;
@@ -28,17 +31,18 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void testCreate() {
+    public void testCreate() throws InputParameterException, ServiceConfigurationException {
         String accType = "CHECK";
         String personKey = "asgahfshs82";
         String bankKey = "blablablabla";
         
         long id = accountEntityFacade.create(accType, personKey, bankKey);
         Assert.assertFalse(id==0);
+ 
     }
     
     @Test
-    public void findTest() {
+    public void findTest() throws InputParameterException, EntityNotFoundException, ServiceConfigurationException {
         String accType = "CHECK";
         String personKey = "asgahfshs82";
         String bankKey = "blablablabla";
@@ -48,17 +52,22 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void findFailTest() {
+    public void findFailTest() throws InputParameterException, EntityNotFoundException, ServiceConfigurationException {
         String accType = "CHECK";
         String personKey = "asgahfshs82";
         String bankKey = "blablablabla";
         
         long id = accountEntityFacade.create(accType, personKey, bankKey);       
-        Assert.assertTrue(accountEntityFacade.find(id + 1) == null);
+        try{
+            Account account = accountEntityFacade.find(id + 1);
+            Assert.assertTrue(false);
+        } catch(EntityNotFoundException e){
+            Assert.assertTrue(true);
+        }
     }
     
     @Test
-    public void findAllTest() {
+    public void findAllTest() throws InputParameterException, ServiceConfigurationException {
         storageFacade.emptyStorage();
 
         accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
@@ -72,7 +81,7 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void findAllTestKey() {
+    public void findAllTestKey() throws InputParameterException, ServiceConfigurationException {
         storageFacade.emptyStorage();
 
         accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
@@ -87,7 +96,7 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void findAllTestKeyFail() {
+    public void findAllTestKeyFail() throws ServiceConfigurationException, InputParameterException {
 
         accountEntityFacade.create("CHECK", "badgadgadgadg", "agasgasgagasg");
         accountEntityFacade.create("CHECK", "asfasfafadsfas", "sdfsdfsadfsfs");
@@ -97,7 +106,7 @@ public class AccountEntityFacadeTest {
         
         List<Account> accounts = accountEntityFacade.findAll("cccss");
         
-        Assert.assertTrue(accounts.size() == 0);
+        Assert.assertTrue(accounts.isEmpty());
     }
     
     @Test
@@ -126,7 +135,7 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void addTransactionTest(){
+    public void addTransactionTest() throws InputParameterException, EntityNotFoundException, ServiceConfigurationException{
         {
             long Aid = accountEntityFacade.create("CHECK", "blablablabla", "asfaagsagsadgdag");
             long Tid = transactionEntityFacade.create(Constants.TRANSACTION_TYPE_CREDIT, 1000, Constants.TRANSACTION_STATUS_OK);
@@ -152,7 +161,7 @@ public class AccountEntityFacadeTest {
     }
     
     @Test
-    public void removeTest() throws Exception {
+    public void removeTest() throws InputParameterException, EntityNotFoundException, ServiceConfigurationException {
         long id = accountEntityFacade.create("CHECK", "sdvkdvsnvkn", "dccdasccas");
         Assert.assertTrue(accountEntityFacade.find(id) != null);
         
@@ -160,12 +169,17 @@ public class AccountEntityFacadeTest {
             accountEntityFacade.remove(id + 1);
             //Should not be reached
             Assert.assertTrue(false);
-        } catch (Exception e) {
+        } catch (EntityNotFoundException e) {
             Assert.assertTrue(true);
         }
         
         accountEntityFacade.remove(id); 
-        
-        Assert.assertTrue(accountEntityFacade.find(id) == null);
+        try {
+            accountEntityFacade.find(id);
+            //Should not be reached
+            Assert.assertTrue(false);
+        } catch (EntityNotFoundException e) {
+            Assert.assertTrue(true);
+        }
     }
 }

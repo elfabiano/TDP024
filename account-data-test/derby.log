@@ -1,10 +1,10 @@
 ----------------------------------------------------------------
-Thu Oct 16 10:24:39 CEST 2014:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-0149-180f-091b-000002730198 
-on database directory memory:C:\Users\Fabian\Development\TDP024\account-data-test\dataPU_embedded  with class loader sun.misc.Launcher$AppClassLoader@752a2259 
-Loaded from file:/C:/Users/Fabian/Development/TDP024/lib/derby.jar
+Thu Oct 16 16:31:06 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-0149-195e-8ac4-000000961748 
+on database directory memory:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-test/dataPU_embedded  with class loader sun.misc.Launcher$AppClassLoader@7ec78e02 
+Loaded from file:/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_25-b16
-user.dir=C:\Users\Fabian\Development\TDP024\account-data-test
+java.runtime.version=1.7.0_25-b15
+user.dir=/Users/filipschollin/Documents/Linkoping/TDP024/TDP024/account-data-test
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

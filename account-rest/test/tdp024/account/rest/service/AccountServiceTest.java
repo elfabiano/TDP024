@@ -33,24 +33,21 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         
         Response response = accS1.create(AccType, person, bank);
-        Assert.assertEquals(200, response.getStatus());  
-        Assert.assertEquals("OK", response.getEntity());
+        Assert.assertEquals(201, response.getStatus());  
         
         AccType = "SAVINGS";
         person = "Blabla";
         bank = "SWEDBANK";
         
         response = accS1.create(AccType, person, bank);
-        Assert.assertEquals(200, response.getStatus());  
-        Assert.assertEquals("FAILED", response.getEntity());
+        Assert.assertEquals(400, response.getStatus());  
         
         AccType = "SAVINGS";
         person = "Lisa Lisasson";
         bank = "EVIL";
         
         response = accS1.create(AccType, person, bank);
-        Assert.assertEquals(200, response.getStatus());  
-        Assert.assertEquals("FAILED", response.getEntity());
+        Assert.assertEquals(400, response.getStatus());  
     }
     
     @Test
@@ -61,7 +58,7 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         {
             Response response = accS1.create(AccType, person, bank);
-            Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(201, response.getStatus());
         }
         {
             Response response = accS1.find("Lisa Lisasson");
@@ -76,12 +73,8 @@ public class AccountServiceTest {
         }
         {
             Response response = accS1.find("Blaaa");
-            Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(400, response.getStatus());
             
-            String json = response.getEntity().toString();
-            
-            List<Map<String, String>> obj = jsonSerializer.fromJson(json, List.class); 
-            Assert.assertTrue(obj.isEmpty());
         }
     }
     
@@ -95,22 +88,22 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         {
             Response response = accS1.create(AccType, person, bank);
-            Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(201, response.getStatus());
         }
         {
             Response response = accS1.credit(1, 700);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             
             response = accS1.debit(1, 800);
-            Assert.assertEquals("FAILED", response.getEntity());
+            Assert.assertEquals(400, response.getStatus());
             response = accS1.debit(1, 300);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             response = accS1.debit(1, 400);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             
             //Must test if an account does not exist.
             response = accS1.debit(2, 400);
-            Assert.assertEquals("FAILED", response.getEntity());
+            Assert.assertEquals(404, response.getStatus());
         }
         
     }
@@ -125,15 +118,15 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         {
             Response response = accS1.create(AccType, person, bank);
-            Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(201, response.getStatus());
         }
         
         {
             Response response = accS1.credit(1, 700);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             
             response = accS1.credit(2, 600);
-            Assert.assertEquals("FAILED", response.getEntity());
+            Assert.assertEquals(404, response.getStatus());
         }
     }
     
@@ -146,17 +139,17 @@ public class AccountServiceTest {
         
         {
             Response response = accS1.create(AccType, person, bank);
-            Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(201, response.getStatus());
         }
         {
             Response response = accS1.credit(1, 700);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             response = accS1.debit(1, 800);
-            Assert.assertEquals("FAILED", response.getEntity());
+            Assert.assertEquals(400, response.getStatus());
             response = accS1.debit(1, 300);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
             response = accS1.debit(1, 400);
-            Assert.assertEquals("OK", response.getEntity());
+            Assert.assertEquals(200, response.getStatus());
         }
         
         {
@@ -175,11 +168,7 @@ public class AccountServiceTest {
         
         {
             Response response = accS1.transactions(3);
-            Assert.assertEquals(200, response.getStatus());
-            String json = response.getEntity().toString();
-            List<Map<String, String>> obj = jsonSerializer.fromJson(json, List.class);
-            System.out.println(obj);
-            Assert.assertTrue(obj.isEmpty());
+            Assert.assertEquals(404, response.getStatus());
         }
     }
 }
